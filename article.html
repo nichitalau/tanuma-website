@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Article | TANUMA Insights</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.article-page .nav{height:57px}.article-page .nav-inner{max-width:1200px;height:57px}.article-page .logo{font-size:19px}.article-page .nav-links{gap:25px}.article-page .nav-links a{font-size:11px;padding:20px 0}.article-page .nav-links a.active:after{bottom:11px}.article-page .nav .btn{font-size:11px;padding:12px 22px}
+.article-hero{height:330px;position:relative;display:flex;align-items:flex-end;background:#173f3a center/cover no-repeat;color:#fff;overflow:hidden}.article-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.62),rgba(0,0,0,.18) 75%)}.article-hero-inner{position:relative;z-index:1;width:min(calc(100% - 80px),980px);margin:auto;padding-bottom:45px}.article-kicker{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-bottom:12px}.article-hero h1{font-size:clamp(36px,5vw,62px);line-height:1;max-width:850px;color:#fff;margin:0 0 13px}.article-meta{font-size:11px;color:rgba(255,255,255,.78)}
+.article-main{padding:70px 0 95px}.article-layout{width:min(calc(100% - 80px),980px);margin:auto;display:grid;grid-template-columns:minmax(0,680px) 220px;gap:70px}.article-content p{font-size:17px;line-height:1.8;color:#515a56;margin:0 0 24px}.article-content h2{font-size:30px;line-height:1.1;margin:42px 0 16px}.article-content ul{padding-left:20px;margin:0 0 25px}.article-content li{font-size:16px;line-height:1.7;color:#515a56;margin-bottom:9px}.article-side{border-left:1px solid var(--line);padding-left:22px;height:max-content;position:sticky;top:90px}.article-side .label{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:var(--green);font-weight:700;margin-bottom:10px}.article-side a{font-size:13px;color:var(--green);font-weight:600}.article-back{display:inline-block;margin-top:35px;color:var(--green);font-weight:700;font-size:13px}.article-source{font-size:11px!important;color:#7a817e!important;line-height:1.5!important;margin-top:45px!important}
+@media(max-width:800px){.article-layout{grid-template-columns:1fr}.article-side{position:static;border-left:0;border-top:1px solid var(--line);padding:20px 0 0}.article-hero-inner,.article-layout{width:min(calc(100% - 42px),980px)}.article-hero{height:390px}.article-page .nav-links{display:none}}
+</style>
+<link rel="stylesheet" href="site-standard.css">
+</head>
+<body class="article-page">
+<header class="nav"><div class="nav-inner"><a class="logo" href="index.html">TANU<span>MA</span></a><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="what-we-offer.html">What We Offer</a><a href="sourcing.html">Sourcing</a><a class="active" href="insights.html">Insights</a></nav><a class="btn btn-primary" href="contact.html">Tell Us What You Need</a></div></header>
+<main id="article-app"></main>
+<script>
+const articles={
+'global-food-trade':{cat:'Trade News',date:'Sep 9, 2026',title:'Global Food Trade: What Changed This Week?',image:'https://images.unsplash.com/photo-1770710000589-de8d2babad65?auto=format&fit=crop&fm=jpg&q=85&w=1800',intro:'A practical weekly view of the developments shaping international food trade — from logistics and regulations to agricultural supply.',sections:[['What buyers should pay attention to','International food trade is rarely moved by one factor. Freight availability, port conditions, harvest expectations, regulations, and currency movements can all affect a buying decision at the same time.','For buyers, the useful question is not simply what changed, but whether the change affects price, timing, availability, or documentation.'],['A more practical way to read the market','Start with the product you actually buy. Then watch the factors that directly influence it: origin availability, production conditions, freight routes, destination requirements, and supplier lead times.','This helps separate market noise from information that can change a real purchase decision.']]},
+'coconut-oil-q4':{cat:'Market Insight',date:'Sep 8, 2026',title:'Coconut Oil Market: What Buyers Should Watch for Q4',image:'https://images.unsplash.com/photo-1773842297845-41b515c19e38?auto=format&fit=crop&fm=jpg&q=85&w=1800',intro:'Coconut oil buying decisions for Q4 will depend on more than the headline price. Raw material availability, freight, and forward expectations all matter.',sections:[['Raw material availability','Copra availability remains one of the first variables buyers should understand when assessing coconut oil offers. Changes in supply at origin can influence both availability and seller positioning.'],['Freight and landed cost','A lower FOB price does not automatically mean a lower buying cost. Freight, port charges, transit time, and route reliability should be considered alongside the commodity price.'],['What to ask suppliers','Ask about origin, current availability, shipment window, specification, packing, and validity of the offer. Clear questions make supplier comparisons much more useful.']]},
+'evaluate-food-supplier':{cat:'Article',date:'Sep 5, 2026',title:'How to Evaluate a Food Supplier Before You Buy',image:'https://images.unsplash.com/photo-1774977867750-5b56e82051d0?auto=format&fit=crop&fm=jpg&q=85&w=1800',intro:'A supplier can look attractive on price and still be the wrong partner. Use a simple framework before moving from inquiry to order.',sections:[['1. Check the product','Confirm specification, grade, origin, packing, shelf life, and any required testing. The product should be defined before price becomes the main discussion.'],['2. Check capability','Ask about production capacity, regular export activity, lead time, and shipment readiness. A good quotation is only useful if the supplier can execute it.'],['3. Check documentation','Review company information, certifications, product documents, and export documentation relevant to the destination market.'],['4. Check communication','Fast, clear, and consistent communication is often a practical indicator of how the supplier will handle the transaction after the order.']]},
+'coconut-market-2026':{cat:'Market Insight',date:'Sep 4, 2026',title:'Where Is the Coconut Oil Market Heading in 2026?',image:'https://images.unsplash.com/photo-1773842297845-41b515c19e38?auto=format&fit=crop&fm=jpg&q=85&w=1800',intro:'Coconut oil markets are influenced by raw material cycles, origin supply, freight, and buyer demand. Looking at the full picture is more useful than following one price point.',sections:[['Supply first','Origin availability is a key starting point for understanding market direction. Production conditions and raw material flows can affect seller offers before a broader market move becomes obvious.'],['Buyer positioning','Buyers should compare current offers with their actual shipment window and inventory needs rather than reacting to every short-term market move.']]},
+'weather-commodities':{cat:'Market Insight',date:'Sep 3, 2026',title:'Why Weather Is Back in the Commodity Conversation',image:'https://images.unsplash.com/photo-1770021018658-b1ccbf448cd3?auto=format&fit=crop&fm=jpg&q=85&w=1800',intro:'Weather can influence agricultural supply, harvest timing, quality expectations, and the pace at which suppliers release offers.',sections:[['Why weather matters','For agricultural commodities, weather affects the physical product before it affects a price chart. Harvest delays, crop quality, and changing supply flows can all reach the buyer later.'],['What buyers can do','Keep a clear view of origin, crop timing, expected shipment windows, and alternative supply options. A diversified sourcing plan can reduce dependence on one supply route.']]},
+'freight-buying-price':{cat:'Logistics',date:'Sep 2, 2026',title:'Freight Is Part of Your Buying Price',image:'https://images.unsplash.com/photo-1774929107410-9cb5fb83fea6?auto=format&fit=crop&fm=jpg&q=85&w=1800',intro:'The commodity price is only one part of what a buyer ultimately pays. Freight and route conditions can materially change landed cost.',sections:[['FOB is not the final number','When comparing offers, consider freight, destination charges, transit time, and the risk of route changes. Two suppliers with similar FOB prices may produce very different landed costs.'],['Build freight into sourcing decisions','A good sourcing comparison should put product price, freight, timing, and reliability in the same view. This makes the commercial decision much clearer.']]},
+'argentina-corn-exports':{cat:'Trade News',date:'Sep 9, 2026',title:'Argentina’s Corn Exports Gain Momentum as Global Supply Routes Shift',image:'https://images.unsplash.com/photo-1770021018658-b1ccbf448cd3?auto=format&fit=crop&fm=jpg&q=85&w=1800',intro:'Changes in agricultural supply routes can influence where buyers look for competitive offers and how quickly origin preferences change.',sections:[['What this means for buyers','When major origins become more competitive, buyers may gain additional sourcing options. The key is to compare quality, freight, shipment timing, and destination requirements together.']]},
+'food-regulations':{cat:'Food Safety',date:'Sep 8, 2026',title:'Food Regulations Are Becoming a Bigger Part of Global Sourcing',image:'https://images.unsplash.com/photo-1774977867750-5b56e82051d0?auto=format&fit=crop&fm=jpg&q=85&w=1800',intro:'Food sourcing increasingly requires buyers to think about compliance alongside price and availability.',sections:[['Compliance starts before the order','Destination requirements should be understood before confirming a supplier. Product specifications, certificates, lab results, labeling, and documentation can all affect whether a shipment is commercially usable.'],['Make compliance part of the RFQ','Including documentation requirements in the initial inquiry makes supplier comparison faster and reduces surprises later in the transaction.']]},
+'port-disruptions':{cat:'Supply Chain',date:'Sep 6, 2026',title:'What Port Disruptions Mean for Food Importers',image:'https://images.unsplash.com/photo-1770710000589-de8d2babad65?auto=format&fit=crop&fm=jpg&q=85&w=1800',intro:'Port disruptions can affect more than ETD. They can change inventory planning, production schedules, and the real cost of a shipment.',sections:[['Timing becomes commercial','A delay can create costs downstream: missed production windows, additional storage, changed vessel plans, and pressure on inventory.'],['Plan for alternatives','When a route becomes unreliable, buyers should consider alternate ports, vessel options, shipment splits, or earlier booking where practical.']]}
+};
+const key=new URLSearchParams(location.search).get('article');
+const a=articles[key]||articles['global-food-trade'];
+document.title=a.title+' | TANUMA Insights';
+const body=a.sections.map(sec=>'<h2>'+sec[0]+'</h2>'+sec.slice(1).map(p=>'<p>'+p+'</p>').join('')).join('');
+document.getElementById('article-app').innerHTML=`<section class="article-hero" style="background-image:url('${a.image}')"><div class="article-hero-inner"><div class="article-kicker">${a.cat}</div><h1>${a.title}</h1><div class="article-meta">${a.date} · TANUMA Insights</div></div></section><section class="article-main"><div class="article-layout"><article class="article-content"><p style="font-size:20px;line-height:1.65;color:#303936">${a.intro}</p>${body}<a class="article-back" href="insights.html">← Back to Insights</a><p class="article-source">Photography: Unsplash. Editorial content prepared for TANUMA Insights.</p></article><aside class="article-side"><div class="label">More from TANUMA</div><a href="insights.html#latest">Latest insights</a><br><br><a href="insights.html#market">Market insights</a><br><br><a href="insights.html#news">Trade news</a></aside></div></section>`;
+</script>
+<footer class="site-footer tanuma-footer">
+  <div class="container tanuma-footer-grid">
+    <div class="tanuma-footer-brand">
+      <div class="logo">TANU<span>MA</span></div>
+      <p>Your Bridge to Global Trade.</p>
+    </div>
+    <div class="tanuma-footer-contact">
+      <div class="tanuma-footer-block">
+        <strong>Contact Us</strong>
+        <a href="mailto:tanumaglobal@gmail.com">tanumaglobal@gmail.com</a>
+        <span>Jakarta, Indonesia</span>
+      </div>
+      <div class="tanuma-footer-block">
+        <strong>For Consultation</strong>
+        <a href="https://wa.me/6285110868066" target="_blank" rel="noopener">WhatsApp: +62 851-1086-8066</a>
+      </div>
+      <div class="tanuma-footer-block tanuma-footer-social">
+        <strong>Follow TANUMA</strong>
+        <div>
+          <a href="https://www.linkedin.com/company/tanumaglobal/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/tanumaglobal/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.threads.net/@tanumaglobal" target="_blank" rel="noopener">Threads</a>
+        </div>
+      </div>
+    </div>
+    <div class="tanuma-footer-links">
+      <a href="products.html">Products</a>
+      <a href="what-we-offer.html">Services</a>
+      <a href="sourcing.html">Sourcing</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+</body></html>

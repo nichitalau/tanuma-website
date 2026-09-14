@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Food Sourcing Services in Indonesia | TANUMA</title>
+<meta name="description" content="TANUMA helps international buyers identify, evaluate and source food products, ingredients and agricultural commodities from qualified suppliers in Indonesia and selected global markets.">
+<link rel="canonical" href="https://tanumaglobal.com/sourcing.html">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* =========================================================
+   TANUMA — SOURCING / REFERENCE DESIGN
+   Page-specific styling only. Global design stays in styles.css.
+   ========================================================= */
+/* Homepage-matched sizing */
+.sourcing-page .nav{height:82px}
+.sourcing-page .nav-inner{max-width:1200px;height:82px}
+.sourcing-page .logo{font-size:22px}
+.sourcing-page .nav-links{gap:34px}
+.sourcing-page .nav-links a{font-size:15px;padding:29px 0}
+.sourcing-page .nav-links a.active:after{bottom:20px}
+.sourcing-page .nav .btn{font-size:15px;padding:15px 24px}
+
+.sourcing-hero{height:690px;min-height:690px;position:relative;display:flex;align-items:flex-end;overflow:hidden;background-image:linear-gradient(90deg,rgba(0,0,0,.48) 0%,rgba(0,0,0,.22) 42%,rgba(0,0,0,.04) 75%,rgba(0,0,0,0) 100%),url("images/sourcing-headline.png");background-position:center;background-size:cover;background-repeat:no-repeat}
+.sourcing-hero:before{display:none}
+.sourcing-hero .container{position:relative;z-index:1;width:min(calc(100% - 80px),1200px);padding-bottom:90px}
+.sourcing-hero .eyebrow{font-size:12px;letter-spacing:.16em;color:#fff;margin-bottom:22px}
+.sourcing-hero h1{max-width:820px;color:#fff;font-size:clamp(48px,6vw,88px);line-height:1.02;letter-spacing:-.045em;margin:0 0 25px}
+.sourcing-hero p{max-width:670px;color:rgba(255,255,255,.82);font-size:19px;line-height:1.65;margin:25px 0 32px}
+.sourcing-hero .btn{background:#fff;color:#15191b;border-color:#fff;font-size:15px;padding:15px 24px}
+
+.sourcing-process{background:#fff;padding:110px 0}
+.sourcing-process .container{width:min(calc(100% - 80px),1200px)}
+.process-intro{max-width:820px;margin-bottom:50px}
+.process-intro .kicker{font-size:12px;letter-spacing:.16em;margin-bottom:18px}
+.process-intro h2{font-size:clamp(38px,4.4vw,64px);line-height:1.08;letter-spacing:-.045em;margin:0}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:35px}
+.process-step{position:relative;min-height:190px;padding:0 20px 0 0}
+.process-step + .process-step{padding-left:20px}
+.process-step:before{content:"";position:absolute;left:49px;right:24px;top:17px;height:1px;background:#dfe5e2}
+.step-number{position:relative;z-index:1;width:35px;height:35px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#dcece7;color:#17675f;font-size:10px;font-weight:700;margin-bottom:14px}
+.process-step h3{font-size:24px;margin:18px 0 10px}
+.process-step p{font-size:17px;line-height:1.65;margin:0;max-width:260px}
+
+.sourcing-beyond{display:grid;grid-template-columns:1fr 1fr;min-height:650px}
+.beyond-image{min-height:650px;background:url("images/sourcing-beyond.jpg") center/cover no-repeat}
+.beyond-copy{display:flex;align-items:center;background:#fbfbf9;padding:80px}
+.beyond-copy-inner{max-width:520px}
+.beyond-copy .kicker{font-size:12px;letter-spacing:.16em;margin-bottom:18px}
+.beyond-copy h2{font-size:clamp(38px,4.4vw,64px);line-height:1.08;letter-spacing:-.045em;margin:0 0 18px}
+.beyond-copy p{font-size:17px;line-height:1.65;margin:0 0 28px;max-width:520px}
+.beyond-copy .btn{background:#1e6258;color:#fff;border-color:#1e6258;font-size:15px;padding:15px 24px}
+
+.sourcing-page footer{border-top:1px solid #ddd}
+.sourcing-page .footer-inner{min-height:125px;max-width:1200px}
+.sourcing-page .footer-inner p{font-size:9px}
+.sourcing-page .footer-links{font-size:9px}
+
+@media(max-width:900px){
+ .sourcing-hero .container,.sourcing-process .container{width:min(calc(100% - 48px),1200px)}
+ .process-grid{grid-template-columns:1fr 1fr;row-gap:35px}
+ .process-step:nth-child(3){padding-left:0}
+ .sourcing-beyond{grid-template-columns:1fr}
+ .beyond-image{min-height:380px}
+}
+@media(max-width:600px){
+ .sourcing-page .nav-links{display:none}
+ .sourcing-hero{height:600px;min-height:600px}
+ .sourcing-hero .container{width:calc(100% - 42px);padding-bottom:55px}
+ .sourcing-hero h1{font-size:46px}
+ .sourcing-process{padding:55px 0}
+ .sourcing-process .container{width:calc(100% - 42px)}
+ .process-grid{grid-template-columns:1fr}
+ .process-step,.process-step + .process-step{padding:27px 0 0;border-top:1px solid var(--line)}
+ .process-step:first-child{padding-top:0;border-top:0}
+ .process-step:before{display:none}
+ .beyond-image{min-height:320px}
+ .beyond-copy{padding:52px 21px}
+}
+
+/* Final Homepage baseline overrides */
+.sourcing-page .sourcing-hero{height:690px;min-height:690px;align-items:flex-end}
+.sourcing-page .sourcing-hero .container{width:min(calc(100% - 80px),1200px);padding-bottom:90px}
+.sourcing-page .sourcing-hero h1{max-width:820px;font-size:clamp(48px,6vw,88px);line-height:1.02;letter-spacing:-.045em}
+.sourcing-page .sourcing-hero p{max-width:670px;font-size:19px;line-height:1.65;margin:25px 0 32px}
+.sourcing-page .sourcing-process{padding:110px 0}
+.sourcing-page .sourcing-beyond{min-height:650px}
+.sourcing-page .beyond-image{min-height:650px}
+.sourcing-page .beyond-copy{padding:80px}
+.sourcing-page .beyond-copy .btn{background:var(--green);color:#fff;border-color:var(--green)}
+.sourcing-page .btn-primary{background:var(--green);color:#fff;border-color:var(--green)}
+@media(max-width:900px){
+ .sourcing-page .sourcing-hero{height:650px;min-height:650px}
+ .sourcing-page .sourcing-hero .container{width:min(calc(100% - 36px),1200px);padding-bottom:65px}
+ .sourcing-page .sourcing-beyond{min-height:0}
+ .sourcing-page .beyond-image{min-height:450px}
+ .sourcing-page .beyond-copy{padding:60px 30px}
+}
+@media(max-width:600px){
+ .sourcing-page .sourcing-hero{height:600px;min-height:600px}
+ .sourcing-page .sourcing-hero h1{font-size:48px}
+ .sourcing-page .sourcing-process{padding:70px 0}
+ .sourcing-page .beyond-image{min-height:320px}
+ .sourcing-page .beyond-copy{padding:52px 21px}
+}
+</style>
+<link rel="stylesheet" href="site-standard.css">
+</head>
+<body class="sourcing-page">
+<header class="nav"><div class="nav-inner">
+<a class="logo" href="index.html">TANU<span>MA</span></a>
+<nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="what-we-offer.html">What We Offer</a><a class="active" href="sourcing.html">Sourcing</a><a href="insights.html">Insights</a></nav>
+<a class="btn btn-primary" href="contact.html">Tell Us What You Need</a>
+</div></header>
+
+<section class="sourcing-hero">
+ <div class="container">
+  <div class="eyebrow">SOURCING</div>
+  <h1>Food Sourcing Services in Indonesia</h1>
+  <p>TANUMA helps international buyers identify, evaluate and source food products, ingredients and agricultural commodities from qualified suppliers in Indonesia.</p>
+  <a class="btn" href="contact.html">Start a Sourcing Request</a>
+ </div>
+</section>
+
+<section class="sourcing-process">
+ <div class="container">
+  <div class="process-intro"><div class="kicker">Our Process</div><h2>Our food sourcing process</h2></div>
+  <div class="process-grid">
+   <div class="process-step"><div class="step-number">01</div><h3>Understand</h3><p>We review your product specifications, quantity, packaging, target price, destination and other purchasing requirements.</p></div>
+   <div class="process-step"><div class="step-number">02</div><h3>Explore</h3><p>We identify potential suppliers through our sourcing network and market research.</p></div>
+   <div class="process-step"><div class="step-number">03</div><h3>Evaluate</h3><p>We compare suppliers based on product specifications, certifications, production capability and commercial requirements.</p></div>
+   <div class="process-step"><div class="step-number">04</div><h3>Connect</h3><p>We facilitate communication with suitable suppliers and coordinate the next steps toward sourcing and export.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sourcing-beyond">
+ <div class="beyond-image" aria-label="Food ingredients and agricultural products"></div>
+ <div class="beyond-copy"><div class="beyond-copy-inner">
+  <div class="kicker">WHAT CAN TANUMA SOURCE?</div>
+  <h2>Food products, ingredients &amp; agricultural commodities</h2>
+  <p>Explore sourcing categories including sweeteners, agricultural products, vegetable oils, spices, grains and starches. If you need a product not shown in our catalogue, send us your specification and we’ll explore suitable sourcing opportunities.</p>
+  <a class="btn" href="contact.html">Contact Our Team</a>
+ </div></div>
+</section>
+
+<footer class="site-footer tanuma-footer">
+  <div class="container tanuma-footer-grid">
+    <div class="tanuma-footer-brand">
+      <div class="logo">TANU<span>MA</span></div>
+      <p>Your Bridge to Global Trade.</p>
+    </div>
+    <div class="tanuma-footer-contact">
+      <div class="tanuma-footer-block">
+        <strong>Contact Us</strong>
+        <a href="mailto:tanumaglobal@gmail.com">tanumaglobal@gmail.com</a>
+        <span>Jakarta, Indonesia</span>
+      </div>
+      <div class="tanuma-footer-block">
+        <strong>For Consultation</strong>
+        <a href="https://wa.me/6285110868066" target="_blank" rel="noopener">WhatsApp: +62 851-1086-8066</a>
+      </div>
+      <div class="tanuma-footer-block tanuma-footer-social">
+        <strong>Follow TANUMA</strong>
+        <div>
+          <a href="https://www.linkedin.com/company/tanumaglobal/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/tanumaglobal/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.threads.net/@tanumaglobal" target="_blank" rel="noopener">Threads</a>
+        </div>
+      </div>
+    </div>
+    <div class="tanuma-footer-links">
+      <a href="products.html">Products</a>
+      <a href="what-we-offer.html">Services</a>
+      <a href="sourcing.html">Sourcing</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+</body></html>

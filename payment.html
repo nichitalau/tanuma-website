@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Payment | TANUMA</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.payment-page{min-height:70vh;padding:105px 0;background:var(--stone)}
+.payment-box{max-width:700px;margin:auto;background:#fff;padding:48px;border:1px solid var(--line)}
+.payment-box .kicker{margin-bottom:18px}
+.payment-box h1{margin:0;font-size:48px;letter-spacing:-.05em;line-height:1}
+.payment-product{margin:30px 0;padding:25px;background:#f1efe8}
+.payment-product strong{display:block;font-size:22px;margin-bottom:8px}
+.payment-product span{color:var(--muted)}
+.payment-actions{display:flex;gap:12px;flex-wrap:wrap}
+.payment-note{font-size:13px;color:var(--muted);margin-top:25px;line-height:1.6}
+</style>
+<link rel="stylesheet" href="site-standard.css">
+</head>
+<body>
+<header class="nav"><div class="nav-inner">
+<a class="logo" href="index.html">TANU<span>MA</span></a>
+<nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="what-we-offer.html">What We Offer</a><a href="sourcing.html">Sourcing</a><a href="insights.html">Insights</a></nav>
+<a class="btn btn-primary" href="contact.html">Tell Us What You Need</a>
+</div></header>
+
+<main class="payment-page"><div class="container"><div class="payment-box">
+<div class="kicker">CHECKOUT</div>
+<h1>Complete your purchase</h1>
+<div class="payment-product">
+<strong id="product-name">Digital Product</strong>
+<span id="product-price">Selected from TANUMA Digital Products</span>
+</div>
+<div class="payment-actions">
+<a id="payment-button" class="btn btn-primary" href="contact.html">Continue to payment →</a>
+<a class="btn" href="digital-products.html">Choose another product</a>
+</div>
+<p class="payment-note">This checkout page is ready for your payment-provider link. Once you have the final payment links, each product button can be connected directly to its checkout.</p>
+</div></div></main>
+
+<script>
+const products={
+"beginner-checklist":["Export-Import Beginner Checklist","FREE"],
+"export-import-101":["Export-Import 101 Mini Guide","Rp49K"],
+"email-templates":["50 Export Sales Email Templates","Rp79K"],
+"starter-pack":["Export-Import Starter Pack","Rp99K"],
+"costing-quotation":["Export Costing + Quotation Template Bundle","Rp199K"],
+"premium-toolkit":["Export-Import Toolkit","Rp299K+"]
+};
+const key=new URLSearchParams(location.search).get("product");
+const data=products[key]||["Digital Product",""];
+document.getElementById("product-name").textContent=data[0];
+document.getElementById("product-price").textContent=data[1];
+</script>
+<footer class="site-footer tanuma-footer">
+  <div class="container tanuma-footer-grid">
+    <div class="tanuma-footer-brand">
+      <div class="logo">TANU<span>MA</span></div>
+      <p>Your Bridge to Global Trade.</p>
+    </div>
+    <div class="tanuma-footer-contact">
+      <div class="tanuma-footer-block">
+        <strong>Contact Us</strong>
+        <a href="mailto:tanumaglobal@gmail.com">tanumaglobal@gmail.com</a>
+        <span>Jakarta, Indonesia</span>
+      </div>
+      <div class="tanuma-footer-block">
+        <strong>For Consultation</strong>
+        <a href="https://wa.me/6285110868066" target="_blank" rel="noopener">WhatsApp: +62 851-1086-8066</a>
+      </div>
+      <div class="tanuma-footer-block tanuma-footer-social">
+        <strong>Follow TANUMA</strong>
+        <div>
+          <a href="https://www.linkedin.com/company/tanumaglobal/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/tanumaglobal/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.threads.net/@tanumaglobal" target="_blank" rel="noopener">Threads</a>
+        </div>
+      </div>
+    </div>
+    <div class="tanuma-footer-links">
+      <a href="products.html">Products</a>
+      <a href="what-we-offer.html">Services</a>
+      <a href="sourcing.html">Sourcing</a>
+      <a href="insights.html">Insights</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
