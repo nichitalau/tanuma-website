@@ -16,7 +16,6 @@
 .contact-main{padding:38px 0 34px}.contact-grid{width:min(calc(100% - 110px),980px);margin:auto;display:grid;grid-template-columns:2fr 1fr;gap:40px}.form-box{background:#f4f3ef;padding:28px 27px 25px}.form-box .kicker,.reach>h3{font-size:10px;letter-spacing:.15em;color:#17675f;font-weight:700;text-transform:uppercase}.form-box h2{font-size:29px;line-height:1.02;letter-spacing:-.04em;margin:10px 0 8px}.form-box>p{font-size:12px;color:#68716d;margin:0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:24px}.field.full{grid-column:1/-1}.field label{display:block;font-size:10px;margin-bottom:5px}.field input,.field textarea{width:100%;box-sizing:border-box;border:1px solid #d9d9d5;background:#fff;padding:11px 12px;font:11px Inter,Arial,sans-serif}.field textarea{height:92px;resize:vertical}.form-box .btn{font-size:11px;padding:12px 22px;border:0;cursor:pointer}
 .reach{padding-top:8px}.reach>h3{margin:0 0 16px}.reach-row{display:flex;align-items:center;gap:14px;margin-bottom:15px}.reach-row .icon{width:42px;height:42px;flex:0 0 42px;border-radius:50%;background:#08786d;color:#fff;display:grid;place-items:center;font-size:17px}.reach strong{display:block;font-size:13px}.reach span{font-size:12px}.meet{border-top:1px solid #ddd;margin-top:18px;padding-top:20px}.meet img{width:100%;height:185px;display:block;object-fit:cover}.meet h3{font-size:15px;color:#15191b;letter-spacing:0;margin:12px 0 7px}.meet p{font-size:11px;color:#68716d;line-height:1.5;margin:0 0 17px}.meet .btn{font-size:11px;padding:11px 20px;background:#fff;color:#17675f;border:1px solid #17675f}
 .promise{background:#f4f3ef;border-top:1px solid #e1e0dc;padding:38px 0}.promise-grid{width:min(calc(100% - 110px),1340px);margin:auto;display:grid;grid-template-columns:1.95fr repeat(3,1fr);align-items:center;min-height:170px}.promise-intro{display:flex;align-items:center;gap:28px;min-height:170px;background:url('images/promise-network.png') left center/430px auto no-repeat;padding-left:450px;padding-right:58px;box-sizing:border-box}.promise-intro strong{font-size:22px;color:#17675f;line-height:1.12;white-space:normal;max-width:270px}.promise-item{border-left:1px solid #ddd;padding:6px 32px;min-height:100px;display:flex;flex-direction:column;justify-content:center}.promise-item strong{display:block;font-size:11px;margin:6px 0}.promise-item span{font-size:10px;color:#68716d;line-height:1.4}
-/* Promise strip — spacious editorial alignment */
 .promise-grid{grid-template-columns:1.95fr repeat(3,1fr)}
 .promise-intro{padding-left:450px;padding-right:58px;background-size:430px auto;gap:28px}
 .promise-intro strong{white-space:normal;max-width:270px}
@@ -28,66 +27,155 @@
 </style>
 <link rel="stylesheet" href="site-standard.css">
 </head>
+
 <body class="contact-page">
+
 <header class="nav"><div class="nav-inner"><a class="logo" href="index.html">TANU<span>MA</span></a><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="what-we-offer.html">What We Offer</a><a href="sourcing.html">Sourcing</a><a href="insights.html">Insights</a></nav><a class="btn btn-primary" href="contact.html">Tell Us What You Need</a></div></header>
 
 <section class="contact-hero"><div class="contact-inner"><div class="eyebrow">CONTACT US</div><h1>Contact TANUMA for Food Sourcing &amp; Export Inquiries</h1><p>Tell us what product, specification, quantity, packaging or destination you are looking for. Our team can help identify suitable sourcing options.</p></div></section>
 
 <section class="contact-main"><div class="contact-grid">
-<div class="form-box"><div class="kicker">START A SOURCING REQUEST</div><h2>Tell us what you need</h2><p>Share your product, specification, quantity, packaging, destination and other purchasing requirements.</p>
-<form action="mailto:tanumaglobal@gmail.com" method="post" enctype="text/plain"><div class="form-grid">
-<div class="field"><label>Name *</label><input name="Name" placeholder="Your name" required></div>
-<div class="field"><label>Company</label><input name="Company" placeholder="Your company name"></div>
-<div class="field"><label>Business Email *</label><input type="email" name="Email" placeholder="you@company.com" required></div>
-<div class="field"><label>Country</label><input name="Country" placeholder="Your country"></div>
-<div class="field full"><label>What do you need? *</label><input name="Requirement" placeholder="Product, ingredient, supplier, sourcing or export support" required></div>
-<div class="field"><label>Quantity / Requirement</label><input name="Quantity" placeholder="e.g. 1 container, 500 kg, etc."></div>
-<div class="field"><label>Destination / Target Market</label><input name="Destination" placeholder="e.g. Indonesia, USA, Middle East, etc."></div>
-<div class="field full"><label>Message</label><textarea name="Message" placeholder="Tell us more about your inquiry..."></textarea></div>
-<div class="field full"><button class="btn btn-primary" type="submit">Send Inquiry</button></div>
-</div></form></div>
+
+<div class="form-box">
+<div class="kicker">START A SOURCING REQUEST</div>
+<h2>Tell us what you need</h2>
+<p>Share your product, specification, quantity, packaging, destination and other purchasing requirements.</p>
+
+<form id="inquiryForm">
+<div class="form-grid">
+
+<div class="field">
+<label>Name *</label>
+<input name="name" placeholder="Your name" required>
+</div>
+
+<div class="field">
+<label>Company</label>
+<input name="company" placeholder="Your company name">
+</div>
+
+<div class="field">
+<label>Business Email *</label>
+<input type="email" name="email" placeholder="you@company.com" required>
+</div>
+
+<div class="field">
+<label>Country</label>
+<input name="country" placeholder="Your country">
+</div>
+
+<div class="field full">
+<label>What do you need? *</label>
+<input name="requirement" placeholder="Product, ingredient, supplier, sourcing or export support" required>
+</div>
+
+<div class="field">
+<label>Quantity / Requirement</label>
+<input name="quantity" placeholder="e.g. 1 container, 500 kg, etc.">
+</div>
+
+<div class="field">
+<label>Destination / Target Market</label>
+<input name="destination" placeholder="e.g. Indonesia, USA, Middle East, etc.">
+</div>
+
+<div class="field full">
+<label>Message</label>
+<textarea name="message" placeholder="Tell us more about your inquiry..."></textarea>
+</div>
+
+<div class="field full">
+<button class="btn btn-primary" type="submit">Send Inquiry</button>
+</div>
+
+</div>
+</form>
+
+</div>
 
 <aside class="reach"><h3>Other ways to reach us</h3>
 <div class="reach-row"><div class="icon">✉</div><div><strong>Email</strong><span>tanumaglobal@gmail.com</span></div></div>
 <div class="reach-row"><div class="icon">◔</div><div><strong>WhatsApp</strong><span>+62 851 1056 8066</span></div></div>
 <div class="reach-row"><div class="icon">⌖</div><div><strong>Our Location</strong><span>Jakarta, Indonesia</span></div></div>
 <div class="meet"><img src="images/contact-meeting-new.png" alt="TANUMA workspace"><h3>Prefer a direct conversation?</h3><p>We’re open to calls or online meetings.<br>Let us know your preferred time<br>and we’ll arrange it.</p><a class="btn" href="mailto:tanumaglobal@gmail.com?subject=Meeting Request">Book a Meeting</a></div>
-</aside></div></section>
+</aside>
+
+</div></section>
 
 <section class="promise"><div class="promise-grid"><div class="promise-intro"><strong>Connecting<br>Local Products to<br>a Global Market.</strong></div><div class="promise-item"><strong>Global Network</strong><span>Sourcing from Indonesia and beyond</span></div><div class="promise-item"><strong>Reliable Partnership</strong><span>From inquiry to delivery</span></div><div class="promise-item"><strong>Real Opportunities</strong><span>Supporting sustainable growth</span></div></div></section>
 
 <footer class="site-footer tanuma-footer">
-  <div class="container tanuma-footer-grid">
-    <div class="tanuma-footer-brand">
-      <div class="logo">TANU<span>MA</span></div>
-      <p>Your Bridge to Global Trade.</p>
-    </div>
-    <div class="tanuma-footer-contact">
-      <div class="tanuma-footer-block">
-        <strong>Contact Us</strong>
-        <a href="mailto:tanumaglobal@gmail.com">tanumaglobal@gmail.com</a>
-        <span>Jakarta, Indonesia</span>
-      </div>
-      <div class="tanuma-footer-block">
-        <strong>For Consultation</strong>
-        <a href="https://wa.me/6285110868066" target="_blank" rel="noopener">WhatsApp: +62 851-1086-8066</a>
-      </div>
-      <div class="tanuma-footer-block tanuma-footer-social">
-        <strong>Follow TANUMA</strong>
-        <div>
-          <a href="https://www.linkedin.com/company/tanumaglobal/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.instagram.com/tanumaglobal/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.threads.net/@tanumaglobal" target="_blank" rel="noopener">Threads</a>
-        </div>
-      </div>
-    </div>
-    <div class="tanuma-footer-links">
-      <a href="products.html">Products</a>
-      <a href="what-we-offer.html">Services</a>
-      <a href="sourcing.html">Sourcing</a>
-      <a href="insights.html">Insights</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
+<div class="container tanuma-footer-grid">
+<div class="tanuma-footer-brand">
+<div class="logo">TANU<span>MA</span></div>
+<p>Your Bridge to Global Trade.</p>
+</div>
+
+<div class="tanuma-footer-contact">
+<div class="tanuma-footer-block">
+<strong>Contact Us</strong>
+<a href="mailto:tanumaglobal@gmail.com">tanumaglobal@gmail.com</a>
+<span>Jakarta, Indonesia</span>
+</div>
+
+<div class="tanuma-footer-block">
+<strong>For Consultation</strong>
+<a href="https://wa.me/6285110868066" target="_blank" rel="noopener">WhatsApp: +62 851-1086-8066</a>
+</div>
+
+<div class="tanuma-footer-block tanuma-footer-social">
+<strong>Follow TANUMA</strong>
+<div>
+<a href="https://www.linkedin.com/company/tanumaglobal/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://www.instagram.com/tanumaglobal/" target="_blank" rel="noopener">Instagram</a>
+<a href="https://www.threads.net/@tanumaglobal" target="_blank" rel="noopener">Threads</a>
+</div>
+</div>
+</div>
+
+<div class="tanuma-footer-links">
+<a href="products.html">Products</a>
+<a href="what-we-offer.html">Services</a>
+<a href="sourcing.html">Sourcing</a>
+<a href="insights.html">Insights</a>
+<a href="contact.html">Contact</a>
+</div>
+</div>
 </footer>
-</body></html>
+
+<script>
+document.getElementById("inquiryForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = this;
+  const button = form.querySelector('button[type="submit"]');
+
+  button.disabled = true;
+  button.textContent = "Sending...";
+
+  const formData = new FormData(form);
+
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbwGsPMzv7A_Lm-YK4kb54M9ri38GFgvJ_LOQsR355VnPF2SmB0umkU3p6jw_GrCEJHJ_g/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: new URLSearchParams(formData)
+      }
+    );
+
+    alert("Thank you! Your inquiry has been received.");
+    form.reset();
+
+  } catch (error) {
+    alert("Something went wrong. Please try again.");
+  }
+
+  button.disabled = false;
+  button.textContent = "Send Inquiry";
+});
+</script>
+
+</body>
+</html>
