@@ -3,511 +3,773 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>About TANUMA | Indonesia Food Sourcing &amp; Global Trade</title>
+
 <meta name="description" content="Learn about TANUMA, a food sourcing and international trade company helping international buyers source products from Indonesia and selected global markets.">
+
+<meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://tanumaglobal.com/about.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tanumaglobal.com/about.html">
+<meta property="og:title" content="About TANUMA | Indonesian Food Sourcing & Global Trade">
+<meta property="og:description" content="Learn about TANUMA, a food sourcing and international trade company connecting international buyers with Indonesian suppliers and global sourcing opportunities.">
+<meta property="og:site_name" content="TANUMA">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About TANUMA | Indonesian Food Sourcing & Global Trade">
+<meta name="twitter:description" content="Learn about TANUMA and our approach to food sourcing, market access, and international trade.">
+
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "TANUMA",
+  "url": "https://tanumaglobal.com/",
+  "description": "TANUMA connects international buyers with Indonesian food suppliers and sourcing opportunities.",
+  "email": "tanumaglobal@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jakarta",
+    "addressCountry": "ID"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/tanumaglobal/",
+    "https://www.instagram.com/tanumaglobal/",
+    "https://www.threads.net/@tanumaglobal"
+  ]
+}
+</script>
+
 <link rel="stylesheet" href="styles.css">
+
 <style>
-/* ABOUT PAGE — clean editorial layout */
-.about-hero{
-  min-height:640px;
-  background-position:center 58%;
+
+/* ABOUT PAGE */
+
+.about-hero {
+  min-height: 640px;
+  background-position: center 58%;
 }
-.about-hero .hero-content{
-  padding-bottom:86px;
-  max-width:900px;
+
+.about-hero .hero-content {
+  padding-bottom: 86px;
+  max-width: 900px;
 }
-.about-hero h1{
-  max-width:850px;
-  font-size:clamp(52px,6vw,82px);
-  line-height:1.02;
-  letter-spacing:-.055em;
+
+.about-hero h1 {
+  max-width: 850px;
+  font-size: clamp(52px, 6vw, 82px);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
 }
 
 /* WHO WE ARE */
-.who{
-  padding:110px 0;
-  background:var(--paper);
+
+.who {
+  padding: 110px 0;
+  background: var(--paper);
 }
-.who-grid{
-  display:grid;
-  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
-  align-items:center;
-  gap:90px;
+
+.who-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: 90px;
 }
-.who-copy h2{
-  max-width:650px;
-  font-size:clamp(44px,4.7vw,70px);
-  line-height:1.02;
-  letter-spacing:-.05em;
-  margin-bottom:30px;
+
+.who-copy h2 {
+  max-width: 650px;
+  font-size: clamp(44px, 4.7vw, 70px);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  margin-bottom: 30px;
 }
-.who-copy p{
-  max-width:610px;
-  font-size:17px;
-  line-height:1.75;
-  color:var(--muted);
+
+.who-copy p {
+  max-width: 610px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--muted);
 }
-.who-copy p + p{margin-top:16px}
-.who-photo{
-  height:610px;
-  border-radius:0 110px 0 110px;
-  overflow:hidden;
+
+.who-copy p + p {
+  margin-top: 16px;
 }
-.who-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  display:block;
+
+.who-photo {
+  height: 610px;
+  border-radius: 0 110px 0 110px;
+  overflow: hidden;
+}
+
+.who-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 /* OUR DIRECTION */
-.direction{
-  position:relative;
-  overflow:hidden;
-  padding:105px 0 90px;
-  background:#f5f3ed;
+
+.direction {
+  position: relative;
+  overflow: hidden;
+  padding: 105px 0 100px;
+  background: #f5f3ed;
 }
-.direction .container{
-  position:relative;
-  z-index:2;
+
+.direction .container {
+  position: relative;
+  z-index: 2;
 }
-.direction-head{
-  max-width:930px;
+
+.direction-reference-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 58px;
+  align-items: end;
 }
-.direction-head h2{
-  max-width:920px;
-  font-size:clamp(54px,6.1vw,86px);
-  line-height:.98;
-  letter-spacing:-.06em;
+
+.direction-main {
+  min-width: 0;
 }
-.direction-layout{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) 360px;
-  gap:52px;
-  align-items:end;
-  margin-top:62px;
+
+.direction-head {
+  max-width: 900px;
 }
-.direction-cards{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
+
+.direction-head .kicker {
+  margin-bottom: 22px;
 }
-.direction-card{
-  min-height:275px;
-  padding:34px 38px;
-  border-radius:20px;
-  background:#ebe9e1;
-  position:relative;
-  overflow:hidden;
+
+.direction-head h2 {
+  margin: 0;
+  max-width: 900px;
+  font-size: clamp(54px, 6vw, 84px);
+  line-height: .97;
+  letter-spacing: -.065em;
 }
-.direction-card.vision{
-  background:var(--green-dark);
-  color:#fff;
+
+.direction-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 68px;
 }
-.direction-card h3{
-  margin:0 0 22px;
-  font-size:30px;
-  letter-spacing:-.035em;
+
+.direction-card {
+  min-height: 270px;
+  padding: 34px 38px;
+  border-radius: 21px;
+  background: #ebe9e1;
+  position: relative;
+  overflow: hidden;
 }
-.direction-card p{
-  margin:0;
-  max-width:450px;
-  font-size:17px;
-  line-height:1.65;
-  color:#69716d;
+
+.direction-card.vision {
+  background: var(--green-dark);
+  color: #fff;
 }
-.direction-card.vision p{color:rgba(255,255,255,.8)}
-.direction-icon{
-  width:50px;
-  height:50px;
-  border:1px solid currentColor;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:20px;
-  font-size:22px;
+
+.direction-card .direction-icon {
+  width: 52px;
+  height: 52px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  font-size: 22px;
+  opacity: .9;
 }
-.leaf{
-  position:absolute;
-  width:210px;
-  height:210px;
-  right:-35px;
-  bottom:-70px;
-  border:3px solid rgba(255,255,255,.11);
-  border-radius:60% 0 60% 0;
-  transform:rotate(-25deg);
+
+.direction-card h3 {
+  margin: 0 0 20px;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -.04em;
 }
-.leaf:after{
-  content:"";
-  position:absolute;
-  width:115px;
-  height:190px;
-  right:-50px;
-  bottom:15px;
-  border:3px solid rgba(255,255,255,.10);
-  border-radius:60% 0 60% 0;
-  transform:rotate(48deg);
+
+.direction-card.mission h3 {
+  color: var(--green);
 }
-.direction-image{
-  height:430px;
-  position:relative;
-  overflow:hidden;
-  border-radius:180px 0 180px 0;
+
+.direction-card p {
+  margin: 0;
+  max-width: 450px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #68716d;
 }
-.direction-image img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  display:block;
+
+.direction-card.vision p {
+  color: rgba(255, 255, 255, .82);
 }
-.direction-image:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(18,63,57,0),rgba(18,63,57,.12));
+
+.direction-card .leaf {
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  right: -45px;
+  bottom: -90px;
+  border: 3px solid rgba(255, 255, 255, .11);
+  border-radius: 60% 0 60% 0;
+  transform: rotate(-25deg);
 }
-.direction-tag{
-  position:absolute;
-  right:34px;
-  bottom:28px;
-  z-index:3;
-  color:#d9ddd7;
-  font-size:10px;
-  line-height:1.7;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-weight:600;
+
+.direction-card .leaf:after {
+  content: "";
+  position: absolute;
+  width: 115px;
+  height: 190px;
+  right: -45px;
+  bottom: 18px;
+  border: 3px solid rgba(255, 255, 255, .10);
+  border-radius: 60% 0 60% 0;
+  transform: rotate(48deg);
+}
+
+.direction-image {
+  height: 560px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 185px 0 185px 0;
+  align-self: end;
+}
+
+.direction-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 52%;
 }
 
 /* CLOSING CTA */
-.about-cta{
-  padding:95px 0;
-  background:var(--green-dark);
-  color:#fff;
-}
-.about-cta .cta-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:50px;
-}
-.about-cta h2{
-  color:#fff;
-  max-width:820px;
-  font-size:clamp(46px,5.3vw,72px);
-  line-height:1.02;
-  letter-spacing:-.05em;
-}
-.about-cta p{
-  color:rgba(255,255,255,.72);
-  max-width:520px;
-  margin-top:20px;
-  font-size:17px;
-  line-height:1.65;
-}
-.about-cta .btn{
-  flex:0 0 auto;
-  background:#fff;
-  color:var(--green-dark);
-  border-color:#fff;
+
+.about-cta {
+  padding: 95px 0;
+  background: var(--green-dark);
+  color: #fff;
 }
 
-@media(max-width:950px){
-  .who-grid{grid-template-columns:1fr;gap:50px}
-  .who-photo{height:520px}
-  .direction-layout{grid-template-columns:1fr}
-  .direction-image{height:440px;max-width:520px}
-  .about-cta .cta-inner{display:block}
-  .about-cta .btn{margin-top:28px}
-}
-@media(max-width:650px){
-  .about-hero{min-height:590px}
-  .about-hero .hero-content{padding-bottom:65px}
-  .who{padding:75px 0}
-  .who-copy h2{font-size:46px}
-  .who-photo{height:390px;border-radius:0 70px 0 70px}
-  .direction{padding:75px 0}
-  .direction-head h2{font-size:48px}
-  .direction-layout{margin-top:42px}
-  .direction-cards{grid-template-columns:1fr}
-  .direction-card{min-height:0;padding:30px}
-  .direction-image{height:360px;border-radius:130px 0 130px 0}
-  .about-cta{padding:70px 0}
-}
-</style>
-
-<style>
-/* Final Our Direction layout */
-.direction{
-  position:relative;
-  overflow:hidden;
-  padding:105px 0 100px;
-  background:#f5f3ed;
-}
-.direction-reference-layout{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) 420px;
-  gap:58px;
-  align-items:end;
-}
-.direction-main{
-  min-width:0;
-}
-.direction-head{
-  max-width:900px;
-}
-.direction-head .kicker{
-  margin-bottom:22px;
-}
-.direction-head h2{
-  margin:0;
-  max-width:900px;
-  font-size:clamp(54px,6vw,84px);
-  line-height:.97;
-  letter-spacing:-.065em;
-}
-.direction-cards{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
-  margin-top:68px;
-}
-.direction-card{
-  min-height:270px;
-  padding:34px 38px;
-  border-radius:21px;
-  background:#ebe9e1;
-  position:relative;
-  overflow:hidden;
-}
-.direction-card.vision{
-  background:var(--green-dark);
-  color:#fff;
-}
-.direction-card .direction-icon{
-  width:52px;
-  height:52px;
-  border:1px solid currentColor;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom:22px;
-  font-size:22px;
-  opacity:.9;
-}
-.direction-card h3{
-  margin:0 0 20px;
-  font-size:30px;
-  line-height:1;
-  letter-spacing:-.04em;
-}
-.direction-card.mission h3{
-  color:var(--green);
-}
-.direction-card p{
-  margin:0;
-  max-width:450px;
-  font-size:17px;
-  line-height:1.65;
-  color:#68716d;
-}
-.direction-card.vision p{
-  color:rgba(255,255,255,.82);
-}
-.direction-card .leaf{
-  position:absolute;
-  width:210px;
-  height:210px;
-  right:-45px;
-  bottom:-90px;
-  border:3px solid rgba(255,255,255,.11);
-  border-radius:60% 0 60% 0;
-  transform:rotate(-25deg);
-}
-.direction-card .leaf:after{
-  content:"";
-  position:absolute;
-  width:115px;
-  height:190px;
-  right:-45px;
-  bottom:18px;
-  border:3px solid rgba(255,255,255,.10);
-  border-radius:60% 0 60% 0;
-  transform:rotate(48deg);
-}
-.direction-image{
-  height:560px;
-  width:100%;
-  overflow:hidden;
-  border-radius:185px 0 185px 0;
-  align-self:end;
-}
-.direction-image img{
-  display:block;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center 52%;
+.about-cta .cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 50px;
 }
 
-@media(max-width:1050px){
-  .direction-reference-layout{
-    grid-template-columns:minmax(0,1fr) 330px;
-    gap:38px;
-  }
-  .direction-image{height:500px}
-  .direction-cards{gap:18px}
+.about-cta h2 {
+  color: #fff;
+  max-width: 820px;
+  font-size: clamp(46px, 5.3vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -.05em;
 }
-@media(max-width:850px){
-  .direction-reference-layout{
-    grid-template-columns:1fr;
-    gap:45px;
-  }
-  .direction-image{
-    height:500px;
-    max-width:520px;
-  }
+
+.about-cta p {
+  color: rgba(255, 255, 255, .72);
+  max-width: 520px;
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.65;
 }
-@media(max-width:650px){
-  .direction{padding:75px 0}
-  .direction-head h2{font-size:48px}
-  .direction-cards{
-    grid-template-columns:1fr;
-    margin-top:42px;
-  }
-  .direction-card{
-    min-height:0;
-    padding:30px;
-  }
-  .direction-image{
-    height:420px;
-    border-radius:130px 0 130px 0;
-  }
+
+.about-cta .btn {
+  flex: 0 0 auto;
+  background: #fff;
+  color: var(--green-dark);
+  border-color: #fff;
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+
+  .direction-reference-layout {
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 38px;
+  }
+
+  .direction-image {
+    height: 500px;
+  }
+
+  .direction-cards {
+    gap: 18px;
+  }
+
+}
+
+@media (max-width: 950px) {
+
+  .who-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .who-photo {
+    height: 520px;
+  }
+
+  .about-cta .cta-inner {
+    display: block;
+  }
+
+  .about-cta .btn {
+    margin-top: 28px;
+  }
+
+}
+
+@media (max-width: 850px) {
+
+  .direction-reference-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .direction-image {
+    height: 500px;
+    max-width: 520px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .about-hero {
+    min-height: 590px;
+  }
+
+  .about-hero .hero-content {
+    padding-bottom: 65px;
+  }
+
+  .who {
+    padding: 75px 0;
+  }
+
+  .who-copy h2 {
+    font-size: 46px;
+  }
+
+  .who-photo {
+    height: 390px;
+    border-radius: 0 70px 0 70px;
+  }
+
+  .direction {
+    padding: 75px 0;
+  }
+
+  .direction-head h2 {
+    font-size: 48px;
+  }
+
+  .direction-cards {
+    grid-template-columns: 1fr;
+    margin-top: 42px;
+  }
+
+  .direction-card {
+    min-height: 0;
+    padding: 30px;
+  }
+
+  .direction-image {
+    height: 420px;
+    border-radius: 130px 0 130px 0;
+  }
+
+  .about-cta {
+    padding: 70px 0;
+  }
+
+}
+
 </style>
 
 <link rel="stylesheet" href="site-standard.css">
+
 </head>
+
 <body>
 
+<!-- NAVIGATION -->
+
 <header class="nav">
+
   <div class="nav-inner">
-    <a class="logo" href="index.html">TANU<span>MA</span></a>
+
+    <a class="logo" href="index.html">
+      TANU<span>MA</span>
+    </a>
+
     <nav class="nav-links">
+
       <a href="index.html">Home</a>
-      <a class="active" href="about.html">About Us</a>
-      <a href="products.html">Products</a>
-      <a href="what-we-offer.html">What We Offer</a>
-      <a href="sourcing.html">Sourcing</a>
-      <a href="insights.html">Insights</a>
+
+      <a class="active" href="about.html">
+        About Us
+      </a>
+
+      <a href="products.html">
+        Products
+      </a>
+
+      <a href="what-we-offer.html">
+        What We Offer
+      </a>
+
+      <a href="sourcing.html">
+        Sourcing
+      </a>
+
+      <a href="insights.html">
+        Insights
+      </a>
+
     </nav>
-    <a class="btn btn-primary" href="contact.html">Tell Us What You Need</a>
+
+    <a class="btn btn-primary" href="contact.html">
+      Tell Us What You Need
+    </a>
+
   </div>
+
 </header>
 
-<section class="hero about-hero" style="background-image:url('images/about-us-banner.jpg')">
+
+<!-- HERO -->
+
+<section
+  class="hero about-hero"
+  style="background-image:url('images/about-us-banner.jpg')"
+>
+
   <div class="container hero-content">
-    <div class="eyebrow">ABOUT TANUMA</div>
-    <h1>About TANUMA | Indonesia Food Sourcing &amp; Global Trade</h1>
-    <p>TANUMA is a food sourcing and international trade company helping international buyers source products from Indonesia and selected global markets.</p>
+
+    <div class="eyebrow">
+      ABOUT TANUMA
+    </div>
+
+    <h1>
+      About TANUMA | Indonesia Food Sourcing &amp; Global Trade
+    </h1>
+
+    <p>
+      TANUMA is a food sourcing and international trade company helping
+      international buyers source products from Indonesia and selected
+      global markets.
+    </p>
+
   </div>
+
 </section>
+
+
+<!-- WHO WE ARE -->
 
 <section class="who">
+
   <div class="container who-grid">
+
     <div class="who-copy">
-      <div class="kicker">WHO WE ARE</div>
-      <h2>Food sourcing takes more than a search.</h2>
-      <p>We help buyers identify suitable products and suppliers, evaluate sourcing options, and move toward practical trade opportunities. We also help businesses explore market promotion and provide practical resources for people learning export-import.</p>
-      <h3 style="margin-top:30px">Our Expertise</h3><p>Food sourcing, supplier identification, supplier evaluation, product evaluation, export coordination, international trade, and market research.</p>
+
+      <div class="kicker">
+        WHO WE ARE
+      </div>
+
+      <h2>
+        Food sourcing takes more than a search.
+      </h2>
+
+      <p>
+        We help buyers identify suitable products and suppliers,
+        evaluate sourcing options, and move toward practical trade
+        opportunities. We also help businesses explore market promotion
+        and provide practical resources for people learning export-import.
+      </p>
+
+      <h3 style="margin-top:30px">
+        Our Expertise
+      </h3>
+
+      <p>
+        Food sourcing, supplier identification, supplier evaluation,
+        product evaluation, export coordination, international trade,
+        and market research.
+      </p>
+
     </div>
+
     <div class="who-photo">
-      <img src="images/who-we-are.jpg" alt="Agricultural field and farmer">
+
+      <img
+        src="images/who-we-are.jpg"
+        alt="Agricultural field and farmer"
+      >
+
     </div>
+
   </div>
+
 </section>
+
+
+<!-- OUR DIRECTION -->
 
 <section class="direction">
+
   <div class="container">
+
     <div class="direction-reference-layout">
+
       <div class="direction-main">
+
         <div class="direction-head">
-          <div class="kicker">OUR DIRECTION</div>
-          <h2>Built around your<br>next opportunity</h2>
+
+          <div class="kicker">
+            OUR DIRECTION
+          </div>
+
+          <h2>
+            Built around your<br>
+            next opportunity
+          </h2>
+
         </div>
+
 
         <div class="direction-cards">
+
+          <!-- VISION -->
+
           <article class="direction-card vision">
-            <div class="direction-icon">♧</div>
-            <h3>Vision</h3>
-            <p>To become a trusted bridge connecting people, products, and opportunities across global markets.</p>
+
+            <div class="direction-icon">
+              ♧
+            </div>
+
+            <h3>
+              Vision
+            </h3>
+
+            <p>
+              To become a trusted bridge connecting people, products,
+              and opportunities across global markets.
+            </p>
+
             <div class="leaf"></div>
+
           </article>
+
+
+          <!-- MISSION -->
 
           <article class="direction-card mission">
-            <div class="direction-icon">↗</div>
-            <h3>Mission</h3>
-            <p>To make sourcing, market access, and trade education simpler, more accessible, and more reliable.</p>
+
+            <div class="direction-icon">
+              ↗
+            </div>
+
+            <h3>
+              Mission
+            </h3>
+
+            <p>
+              To make sourcing, market access, and trade education
+              simpler, more accessible, and more reliable.
+            </p>
+
           </article>
+
         </div>
+
       </div>
+
 
       <div class="direction-image">
-        <img src="images/our-direction.jpg" alt="Hands holding soil">
+
+        <img
+          src="images/our-direction.jpg"
+          alt="Hands holding soil"
+        >
+
       </div>
+
     </div>
+
   </div>
+
 </section>
+
+
+<!-- CLOSING CTA -->
 
 <section class="about-cta">
+
   <div class="container cta-inner">
+
     <div>
-      <div class="eyebrow" style="color:rgba(255,255,255,.65)">YOUR NEXT MOVE</div>
-      <h2>Let’s find the right opportunity.</h2>
-      <p>Tell us what you are looking for, what you want to promote, or where you want to take your next trade idea.</p>
+
+      <div
+        class="eyebrow"
+        style="color:rgba(255,255,255,.65)"
+      >
+        YOUR NEXT MOVE
+      </div>
+
+      <h2>
+        Let’s find the right opportunity.
+      </h2>
+
+      <p>
+        Tell us what you are looking for, what you want to promote,
+        or where you want to take your next trade idea.
+      </p>
+
     </div>
-    <a class="btn" href="contact.html">Start a conversation →</a>
+
+    <a class="btn" href="contact.html">
+      Start a conversation →
+    </a>
+
   </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer class="site-footer tanuma-footer">
+
   <div class="container tanuma-footer-grid">
+
     <div class="tanuma-footer-brand">
-      <div class="logo">TANU<span>MA</span></div>
-      <p>Your Bridge to Global Trade.</p>
+
+      <div class="logo">
+        TANU<span>MA</span>
+      </div>
+
+      <p>
+        Your Bridge to Global Trade.
+      </p>
+
     </div>
+
+
     <div class="tanuma-footer-contact">
+
       <div class="tanuma-footer-block">
-        <strong>Contact Us</strong>
-        <a href="mailto:tanumaglobal@gmail.com">tanumaglobal@gmail.com</a>
-        <span>Jakarta, Indonesia</span>
+
+        <strong>
+          Contact Us
+        </strong>
+
+        <a href="mailto:tanumaglobal@gmail.com">
+          tanumaglobal@gmail.com
+        </a>
+
+        <span>
+          Jakarta, Indonesia
+        </span>
+
       </div>
+
+
       <div class="tanuma-footer-block">
-        <strong>For Consultation</strong>
-        <a href="https://wa.me/6285110868066" target="_blank" rel="noopener">WhatsApp: +62 851-1086-8066</a>
+
+        <strong>
+          For Consultation
+        </strong>
+
+        <a
+          href="https://wa.me/6285110868066"
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp: +62 851-1086-8066
+        </a>
+
       </div>
+
+
       <div class="tanuma-footer-block tanuma-footer-social">
-        <strong>Follow TANUMA</strong>
+
+        <strong>
+          Follow TANUMA
+        </strong>
+
         <div>
-          <a href="https://www.linkedin.com/company/tanumaglobal/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.instagram.com/tanumaglobal/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.threads.net/@tanumaglobal" target="_blank" rel="noopener">Threads</a>
+
+          <a
+            href="https://www.linkedin.com/company/tanumaglobal/"
+            target="_blank"
+            rel="noopener"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://www.instagram.com/tanumaglobal/"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
+          </a>
+
+          <a
+            href="https://www.threads.net/@tanumaglobal"
+            target="_blank"
+            rel="noopener"
+          >
+            Threads
+          </a>
+
         </div>
+
       </div>
+
     </div>
+
+
     <div class="tanuma-footer-links">
-      <a href="products.html">Products</a>
-      <a href="what-we-offer.html">Services</a>
-      <a href="sourcing.html">Sourcing</a>
-      <a href="insights.html">Insights</a>
-      <a href="contact.html">Contact</a>
+
+      <a href="products.html">
+        Products
+      </a>
+
+      <a href="what-we-offer.html">
+        Services
+      </a>
+
+      <a href="sourcing.html">
+        Sourcing
+      </a>
+
+      <a href="insights.html">
+        Insights
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
     </div>
+
   </div>
+
 </footer>
 
 </body>
