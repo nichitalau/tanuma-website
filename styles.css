@@ -104,3 +104,187 @@ footer{padding:55px 0;border-top:1px solid var(--line)}.footer-inner{display:fle
 .btn{display:inline-flex;align-items:center;justify-content:center;line-height:1.2}
 .btn-primary{color:#fff!important}
 @media(max-width:900px){.nav-inner{transform:none}}
+
+/* =========================================================
+   TANUMA MOBILE SIDE MENU
+   Applies to all pages
+   ========================================================= */
+
+/* Desktop: hamburger hidden */
+.menu-toggle {
+  display: none;
+  position: relative;
+  z-index: 110;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 5px auto;
+  background: var(--ink);
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* Mobile menu link that is only shown inside drawer */
+.mobile-contact-link {
+  display: none;
+}
+
+/* Mobile side menu */
+@media (max-width: 900px) {
+
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    min-height: 72px;
+    padding: 14px 0;
+  }
+
+  .nav-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: min(calc(100% - 36px), var(--max));
+    gap: 16px;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 110;
+    flex-shrink: 0;
+  }
+
+  /* Hide desktop CTA on mobile */
+  .desktop-contact-btn {
+    display: none !important;
+  }
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Side drawer */
+  .nav-links {
+    position: fixed;
+    z-index: 105;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: min(82vw, 350px);
+    height: 100dvh;
+
+    padding: 105px 32px 40px;
+    gap: 0;
+
+    background: var(--paper);
+    border-left: 1px solid var(--line);
+    box-shadow: -12px 0 35px rgba(21, 25, 27, 0.12);
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    transform: translateX(105%);
+    visibility: hidden;
+    transition:
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  /* Open state */
+  .nav-links.is-open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  /* Menu items */
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--green);
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  /* Contact button inside mobile drawer */
+  .nav-links .mobile-contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin-top: 28px;
+    padding: 15px 18px;
+
+    background: var(--green);
+    border: 1px solid var(--green);
+    color: var(--white) !important;
+    text-align: center;
+  }
+
+  .nav-links .mobile-contact-link:hover {
+    background: var(--green-dark);
+    color: var(--white) !important;
+  }
+
+  /* Hamburger animation into X */
+  .menu-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Prevent background page scrolling */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 380px) {
+  .nav-links {
+    width: min(88vw, 320px);
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
