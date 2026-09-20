@@ -1,30 +1,65 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>About TANUMA | Indonesia Food Sourcing &amp; Global Trade</title>
 
-<meta name="description" content="Learn about TANUMA, a food sourcing and international trade company helping international buyers source products from Indonesia and selected global markets.">
+<meta
+  name="description"
+  content="Learn about TANUMA, a food sourcing and international trade company helping international buyers source products from Indonesia and selected global markets."
+>
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://tanumaglobal.com/about.html">
+<link
+  rel="canonical"
+  href="https://tanumaglobal.com/about.html"
+>
 
 <!-- Open Graph -->
+
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://tanumaglobal.com/about.html">
-<meta property="og:title" content="About TANUMA | Indonesian Food Sourcing & Global Trade">
-<meta property="og:description" content="Learn about TANUMA, a food sourcing and international trade company connecting international buyers with Indonesian suppliers and global sourcing opportunities.">
+
+<meta
+  property="og:url"
+  content="https://tanumaglobal.com/about.html"
+>
+
+<meta
+  property="og:title"
+  content="About TANUMA | Indonesian Food Sourcing & Global Trade"
+>
+
+<meta
+  property="og:description"
+  content="Learn about TANUMA, a food sourcing and international trade company connecting international buyers with Indonesian suppliers and global sourcing opportunities."
+>
+
 <meta property="og:site_name" content="TANUMA">
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About TANUMA | Indonesian Food Sourcing & Global Trade">
-<meta name="twitter:description" content="Learn about TANUMA and our approach to food sourcing, market access, and international trade.">
+
+<meta
+  name="twitter:card"
+  content="summary_large_image"
+>
+
+<meta
+  name="twitter:title"
+  content="About TANUMA | Indonesian Food Sourcing & Global Trade"
+>
+
+<meta
+  name="twitter:description"
+  content="Learn about TANUMA and our approach to food sourcing, market access, and international trade."
+>
 
 <!-- Organization Schema -->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,7 +85,9 @@
 
 <style>
 
-/* ABOUT PAGE */
+/* =========================================
+   ABOUT PAGE
+========================================= */
 
 .about-hero {
   min-height: 640px;
@@ -69,7 +106,9 @@
   letter-spacing: -0.055em;
 }
 
-/* WHO WE ARE */
+/* =========================================
+   WHO WE ARE
+========================================= */
 
 .who {
   padding: 110px 0;
@@ -116,7 +155,9 @@
   display: block;
 }
 
-/* OUR DIRECTION */
+/* =========================================
+   OUR DIRECTION
+========================================= */
 
 .direction {
   position: relative;
@@ -253,7 +294,9 @@
   object-position: center 52%;
 }
 
-/* CLOSING CTA */
+/* =========================================
+   CLOSING CTA
+========================================= */
 
 .about-cta {
   padding: 95px 0;
@@ -291,7 +334,9 @@
   border-color: #fff;
 }
 
-/* RESPONSIVE */
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media (max-width: 1050px) {
 
@@ -397,15 +442,177 @@
 
 }
 
+/* =========================================
+   MOBILE HAMBURGER MENU
+========================================= */
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(20,23,26,.18);
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1201;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 3px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+@media (max-width:850px) {
+
+  .nav-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    min-height: 70px;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    gap: 12px;
+  }
+
+  .nav .logo {
+    display: block;
+    flex: 0 0 auto;
+    min-width: 0;
+    margin-right: auto;
+    white-space: nowrap;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+    position: absolute !important;
+    top: 50%;
+    right: 24px;
+    left: auto !important;
+    margin: 0 !important;
+    transform: translateY(-50%);
+    z-index: 1201;
+  }
+
+  .nav-links {
+    display: flex !important;
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: min(320px,85vw);
+    height: 100dvh;
+    padding: 100px 24px 30px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    background: var(--paper,#fafaf8);
+    box-shadow: -10px 0 35px rgba(20,23,26,.15);
+    z-index: 1200;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: transform .3s ease, opacity .3s ease, visibility .3s ease;
+  }
+
+  .nav-links.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 14px 16px;
+    border-radius: 8px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(31,92,82,.08);
+  }
+
+  .nav > .nav-inner > .btn-primary {
+    display: none !important;
+  }
+
+  .mobile-contact-link {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    padding: 14px 20px !important;
+    background: var(--ink,#14171a);
+    color: #fff !important;
+    border-radius: 999px !important;
+    text-align: center;
+  }
+
+  .menu-toggle.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.is-active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+}
+
+@media (max-width:420px) {
+
+  .nav-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .menu-toggle {
+    right: 16px;
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
 </style>
 
 <link rel="stylesheet" href="site-standard.css">
 
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
 
 <header class="nav">
 
@@ -415,9 +622,11 @@
       TANU<span>MA</span>
     </a>
 
-    <nav class="nav-links">
+    <nav id="main-navigation" class="nav-links">
 
-      <a href="index.html">Home</a>
+      <a href="index.html">
+        Home
+      </a>
 
       <a class="active" href="about.html">
         About Us
@@ -439,18 +648,41 @@
         Insights
       </a>
 
+      <a class="mobile-contact-link" href="contact.html">
+        Tell Us What You Need
+      </a>
+
     </nav>
 
-    <a class="btn btn-primary" href="contact.html">
+    <a
+      class="btn btn-primary desktop-contact-btn"
+      href="contact.html"
+    >
       Tell Us What You Need
     </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="main-navigation"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
 
   </div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================================
+     HERO
+========================================= -->
 
 <section
   class="hero about-hero"
@@ -478,7 +710,9 @@
 </section>
 
 
-<!-- WHO WE ARE -->
+<!-- =========================================
+     WHO WE ARE
+========================================= -->
 
 <section class="who">
 
@@ -527,7 +761,9 @@
 </section>
 
 
-<!-- OUR DIRECTION -->
+<!-- =========================================
+     OUR DIRECTION
+========================================= -->
 
 <section class="direction">
 
@@ -552,6 +788,7 @@
 
 
         <div class="direction-cards">
+
 
           <!-- VISION -->
 
@@ -594,6 +831,7 @@
 
           </article>
 
+
         </div>
 
       </div>
@@ -615,7 +853,9 @@
 </section>
 
 
-<!-- CLOSING CTA -->
+<!-- =========================================
+     CLOSING CTA
+========================================= -->
 
 <section class="about-cta">
 
@@ -650,11 +890,14 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer class="site-footer tanuma-footer">
 
   <div class="container tanuma-footer-grid">
+
 
     <div class="tanuma-footer-brand">
 
@@ -670,6 +913,7 @@
 
 
     <div class="tanuma-footer-contact">
+
 
       <div class="tanuma-footer-block">
 
@@ -741,6 +985,7 @@
 
       </div>
 
+
     </div>
 
 
@@ -768,9 +1013,148 @@
 
     </div>
 
+
   </div>
 
 </footer>
 
+
+<!-- =========================================
+     MOBILE MENU SCRIPT
+========================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const menuToggle = document.querySelector(".menu-toggle");
+
+  const navigation = document.querySelector("#main-navigation");
+
+
+  if (!menuToggle || !navigation) {
+
+    console.warn("Mobile menu elements not found.");
+
+    return;
+
+  }
+
+
+  function closeMenu() {
+
+    menuToggle.classList.remove("is-active");
+
+    navigation.classList.remove("is-open");
+
+    document.body.classList.remove("menu-open");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation menu"
+    );
+
+  }
+
+
+  function openMenu() {
+
+    menuToggle.classList.add("is-active");
+
+    navigation.classList.add("is-open");
+
+    document.body.classList.add("menu-open");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Close navigation menu"
+    );
+
+  }
+
+
+  menuToggle.addEventListener("click", function(event) {
+
+    event.stopPropagation();
+
+    if (navigation.classList.contains("is-open")) {
+
+      closeMenu();
+
+    } else {
+
+      openMenu();
+
+    }
+
+  });
+
+
+  navigation
+    .querySelectorAll("a")
+    .forEach(function(link) {
+
+      link.addEventListener("click", closeMenu);
+
+    });
+
+
+  document.addEventListener("click", function(event) {
+
+    if (
+
+      navigation.classList.contains("is-open") &&
+
+      !navigation.contains(event.target) &&
+
+      !menuToggle.contains(event.target)
+
+    ) {
+
+      closeMenu();
+
+    }
+
+  });
+
+
+  document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+      closeMenu();
+
+    }
+
+  });
+
+
+  window.addEventListener("resize", function() {
+
+    if (window.innerWidth > 850) {
+
+      closeMenu();
+
+    }
+
+  });
+
+
+});
+
+</script>
+
+
 </body>
+
 </html>
