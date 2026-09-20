@@ -1133,3 +1133,101 @@ code {
   max-width: 100%;
   overflow-x: auto;
 }
+
+/* =========================================================
+   TANUMA EMERGENCY UI FIX
+   ========================================================= */
+
+/* Fix hero buttons */
+.hero a.btn,
+.hero .btn {
+  color: var(--white);
+}
+
+.hero a.btn-light,
+.hero .btn-light {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--ink) !important;
+}
+
+.hero a.btn-light:hover,
+.hero .btn-light:hover {
+  background: var(--stone);
+  border-color: var(--stone);
+  color: var(--ink) !important;
+}
+
+.hero a.btn-primary,
+.hero .btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white) !important;
+}
+
+/* Keep header navigation in one row on desktop */
+header .container,
+.site-header .container {
+  width: min(100% - 64px, 1240px);
+  margin-inline: auto;
+}
+
+header nav,
+.site-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+header nav ul,
+.site-header nav ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav .btn,
+.site-header nav .btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Prevent header CTA from falling to a new line */
+header .btn,
+.site-header .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile header */
+@media (max-width: 700px) {
+  header .container,
+  .site-header .container {
+    width: calc(100% - 36px);
+  }
+
+  header nav,
+  .site-header nav {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  header nav ul,
+  .site-header nav ul {
+    width: 100%;
+    gap: 18px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  header nav .btn,
+  .site-header nav .btn {
+    display: none;
+  }
+}
