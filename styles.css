@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap');
 
 /* =========================================================
-   TANUMA GLOBAL STYLES
-   ========================================================= */
+   TANUMA GLOBAL DESIGN SYSTEM
+========================================================= */
 
 :root {
   --ink: #15191b;
@@ -15,9 +15,13 @@
   --line: rgba(21, 25, 27, 0.13);
   --white: #ffffff;
   --max: 1200px;
+  --font-display: "Sora", Arial, sans-serif;
   --font-body: "Inter", Arial, sans-serif;
-  --font-heading: "Sora", Arial, sans-serif;
 }
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
   box-sizing: border-box;
@@ -39,12 +43,29 @@ body.menu-open {
   overflow: hidden;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
 h4 {
   margin: 0;
-  font-family: var(--font-heading);
+  font-family: var(--font-display);
   line-height: 1.08;
   letter-spacing: -0.035em;
 }
@@ -66,286 +87,14 @@ p {
   font-size: 17px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-input,
-textarea,
-select {
-  font-family: inherit;
-}
+/* =========================================================
+   GLOBAL LAYOUT
+========================================================= */
 
 .container {
   width: min(calc(100% - 80px), var(--max));
   margin: 0 auto;
 }
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  min-height: 82px;
-  background: rgba(251, 251, 249, 0.96);
-  border-bottom: 1px solid var(--line);
-
-  display: flex;
-  align-items: center;
-
-  backdrop-filter: blur(10px);
-}
-
-.nav-inner {
-  width: min(calc(100% - 80px), var(--max));
-  min-height: 48px;
-  margin: 0 auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-
-  transform: translateX(-4px);
-}
-
-.logo {
-  display: block;
-  position: relative;
-  z-index: 1100;
-
-  flex: 0 0 auto;
-
-  color: var(--ink);
-  font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.05em;
-  white-space: nowrap;
-}
-
-.logo span {
-  color: var(--green);
-}
-
-.logo img {
-  display: block;
-  width: auto;
-  max-width: 160px;
-  height: auto;
-  object-fit: contain;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 34px;
-}
-
-.nav-links a {
-  position: relative;
-
-  padding: 29px 0;
-
-  color: #56605c;
-  font-size: 15px;
-  white-space: nowrap;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--ink);
-}
-
-.nav-links a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 20px;
-
-  width: 100%;
-  height: 1px;
-
-  background: var(--green);
-}
-
-.nav-cta {
-  flex: 0 0 auto;
-}
-
-.desktop-contact-btn {
-  display: inline-flex;
-}
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 48px;
-  padding: 15px 24px;
-
-  border: 1px solid transparent;
-  border-radius: 3px;
-
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.2;
-
-  text-decoration: none;
-  cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-}
-
-.btn-primary,
-.btn.btn-primary {
-  background: var(--green) !important;
-  border-color: var(--green) !important;
-  color: var(--white) !important;
-}
-
-.btn-primary:hover,
-.btn.btn-primary:hover {
-  background: var(--green-dark) !important;
-  border-color: var(--green-dark) !important;
-}
-
-.btn-light {
-  background: var(--white);
-  border-color: var(--white);
-  color: var(--ink);
-}
-
-.btn-light:hover {
-  background: var(--stone);
-  border-color: var(--stone);
-}
-
-.btn-outline {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.65);
-  color: var(--white);
-}
-
-.btn-outline:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: var(--white);
-}
-
-/* Navbar button */
-.nav .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 48px;
-  min-height: 48px;
-  margin-top: 0;
-  padding: 0 24px;
-
-  line-height: 1.2;
-}
-
-/* =========================================================
-   HERO
-   ========================================================= */
-
-.hero {
-  position: relative;
-
-  min-height: 690px;
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;
-
-  background-size: cover;
-  background-position: center;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.68),
-      rgba(0, 0, 0, 0.26) 58%,
-      rgba(0, 0, 0, 0.15)
-    );
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-
-  max-width: 820px;
-  padding: 110px 0 90px;
-
-  color: var(--white);
-}
-
-.eyebrow {
-  margin-bottom: 22px;
-
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  max-width: 820px;
-  color: var(--white);
-}
-
-.hero p {
-  max-width: 670px;
-  margin: 25px 0 32px;
-
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 19px;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-/* =========================================================
-   SECTIONS
-   ========================================================= */
 
 .section {
   padding: 110px 0;
@@ -357,7 +106,6 @@ select {
 
 .kicker {
   margin-bottom: 18px;
-
   color: var(--green);
   font-size: 12px;
   font-weight: 600;
@@ -374,7 +122,6 @@ select {
   align-items: center;
   justify-content: space-between;
   gap: 70px;
-
   margin-bottom: 48px;
 }
 
@@ -384,8 +131,222 @@ select {
 }
 
 /* =========================================================
-   GRIDS AND CARDS
-   ========================================================= */
+   NAVIGATION
+========================================================= */
+
+.nav {
+  position: relative;
+  top: 0;
+  z-index: 100;
+  min-height: 82px;
+  background: rgba(251, 251, 249, 0.97);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: min(calc(100% - 80px), var(--max));
+  min-height: 82px;
+  margin: 0 auto;
+}
+
+.logo {
+  position: relative;
+  z-index: 110;
+  flex-shrink: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--green);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  margin-left: auto;
+}
+
+.nav-links a {
+  position: relative;
+  padding: 29px 0;
+  color: #56605c;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--ink);
+}
+
+.nav-links a.active::after {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  left: 0;
+  height: 1px;
+  background: var(--green);
+  content: "";
+}
+
+.nav-cta,
+.desktop-contact-btn {
+  flex-shrink: 0;
+}
+
+.nav .btn,
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  height: 48px;
+  margin-top: 0;
+  padding: 0 24px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 24px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary,
+.btn.btn-primary,
+.nav .btn-primary {
+  background: var(--green) !important;
+  border-color: var(--green) !important;
+  color: var(--white) !important;
+}
+
+.btn-primary:hover,
+.btn.btn-primary:hover,
+.nav .btn-primary:hover {
+  background: var(--green-dark) !important;
+  border-color: var(--green-dark) !important;
+  color: var(--white) !important;
+}
+
+.btn-light {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.55);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+  color: var(--white);
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 690px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.68),
+      rgba(0, 0, 0, 0.26) 58%,
+      rgba(0, 0, 0, 0.15)
+    );
+  content: "";
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  padding: 110px 0 90px;
+  color: var(--white);
+}
+
+.eyebrow {
+  margin-bottom: 22px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 820px;
+  color: var(--white);
+}
+
+.hero p {
+  max-width: 670px;
+  margin: 25px 0 32px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 19px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* =========================================================
+   GRID SYSTEM
+========================================================= */
 
 .grid-3 {
   display: grid;
@@ -399,18 +360,20 @@ select {
   gap: 24px;
 }
 
+/* =========================================================
+   CARDS
+========================================================= */
+
 .card {
   overflow: hidden;
-
   background: var(--white);
   border: 1px solid var(--line);
 }
 
 .card-img {
   height: 300px;
-
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .card-body {
@@ -424,87 +387,70 @@ select {
 
 .text-link {
   padding-bottom: 4px;
-
+  border-bottom: 1px solid var(--green);
   color: var(--green);
   font-weight: 600;
-
-  border-bottom: 1px solid var(--green);
-}
-
-.text-link:hover {
-  color: var(--green-dark);
-  border-color: var(--green-dark);
 }
 
 /* =========================================================
-   SPLIT CONTENT
-   ========================================================= */
+   SPLIT SECTIONS
+========================================================= */
 
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   min-height: 650px;
 }
 
 .split-img {
   min-height: 520px;
-
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .split-copy {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   padding: 80px;
 }
 
 .split-copy ul {
   margin: 32px 0 0;
   padding: 0;
-
   list-style: none;
 }
 
 .split-copy li {
   position: relative;
-
   padding: 0 0 24px 26px;
 }
 
 .split-copy li::before {
-  content: "";
-
   position: absolute;
-  left: 0;
   top: 9px;
-
+  left: 0;
   width: 7px;
   height: 7px;
-
-  border-radius: 50%;
   background: var(--green);
+  border-radius: 50%;
+  content: "";
 }
 
 .split-copy strong {
-  font-family: var(--font-heading);
+  font-family: var(--font-display);
   font-size: 17px;
 }
 
 .split-copy li span {
   display: block;
-
   margin-top: 5px;
-
   color: var(--muted);
 }
 
 /* =========================================================
-   DARK SECTION AND STEPS
-   ========================================================= */
+   DARK SECTIONS AND STEPS
+========================================================= */
 
 .dark {
   background: var(--green-dark);
@@ -519,13 +465,11 @@ select {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 35px;
-
   margin-top: 50px;
 }
 
 .step {
   padding-top: 22px;
-
   border-top: 1px solid rgba(255, 255, 255, 0.28);
 }
 
@@ -541,35 +485,30 @@ select {
 
 /* =========================================================
    CTA SECTION
-   ========================================================= */
+========================================================= */
 
 .cta {
   position: relative;
-
-  min-height: 480px;
-
   display: flex;
   align-items: center;
-
-  background-size: cover;
+  min-height: 480px;
+  overflow: hidden;
   background-position: center;
+  background-size: cover;
 }
 
 .cta::before {
-  content: "";
-
   position: absolute;
   inset: 0;
-
+  z-index: 0;
   background: rgba(0, 0, 0, 0.55);
+  content: "";
 }
 
 .cta-content {
   position: relative;
   z-index: 1;
-
   max-width: 650px;
-
   color: var(--white);
 }
 
@@ -579,13 +518,12 @@ select {
 
 .cta p {
   margin: 20px 0 28px;
-
   color: rgba(255, 255, 255, 0.8);
 }
 
 /* =========================================================
    PRODUCT PAGES
-   ========================================================= */
+========================================================= */
 
 .product-hero {
   min-height: 560px;
@@ -597,18 +535,18 @@ select {
 
 .tag {
   display: inline-block;
-
   padding: 6px 10px;
-
   background: var(--stone);
   color: #58625e;
-
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-/* Product detail pages */
+/* =========================================================
+   PRODUCT DETAIL PAGES
+========================================================= */
+
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -623,16 +561,14 @@ select {
 
 .image-panel img {
   display: block;
-
   width: 100%;
   height: 460px;
-
   object-fit: cover;
 }
 
 /* =========================================================
    FORMS
-   ========================================================= */
+========================================================= */
 
 .form-wrap {
   padding: 50px;
@@ -665,17 +601,13 @@ input,
 textarea,
 select {
   width: 100%;
-
   padding: 16px;
-
   background: var(--white);
   border: 1px solid rgba(21, 25, 27, 0.14);
   border-radius: 0;
-
-  color: var(--ink);
-  font-size: 16px;
-
   outline: none;
+  color: var(--ink);
+  font: inherit;
 }
 
 input:focus,
@@ -691,12 +623,11 @@ textarea {
 
 /* =========================================================
    FOOTER
-   ========================================================= */
+========================================================= */
 
 footer,
 .site-footer {
   padding: 55px 0;
-
   border-top: 1px solid var(--line);
 }
 
@@ -712,7 +643,6 @@ footer,
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-
   color: var(--muted);
   font-size: 14px;
 }
@@ -725,7 +655,7 @@ footer,
 /* =========================================================
    HERO TEXT CLEANUP
    Prevents unwanted shadow or ghosting
-   ========================================================= */
+========================================================= */
 
 .hero h1,
 .hero h2,
@@ -753,37 +683,31 @@ footer,
 }
 
 /* =========================================================
-   MOBILE MENU BUTTON
-   ========================================================= */
+   MOBILE MENU
+========================================================= */
+
+/* Desktop: hamburger hidden */
 
 .menu-toggle {
   display: none;
-
   position: relative;
-  z-index: 1200;
-
+  z-index: 110;
+  flex-shrink: 0;
   width: 44px;
   height: 44px;
-  padding: 8px;
-
-  flex: 0 0 44px;
-
+  padding: 10px;
   background: transparent;
   border: 1px solid var(--line);
-  border-radius: 14px;
-
+  border-radius: 3px;
   cursor: pointer;
 }
 
 .menu-toggle span {
   display: block;
-
   width: 22px;
   height: 2px;
-  margin: 4px auto;
-
+  margin: 5px auto;
   background: var(--ink);
-
   transition:
     transform 0.25s ease,
     opacity 0.25s ease;
@@ -795,10 +719,9 @@ footer,
 
 /* =========================================================
    TABLET AND MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 900px) {
-
   .container {
     width: min(calc(100% - 36px), var(--max));
   }
@@ -806,101 +729,79 @@ footer,
   .nav {
     position: sticky;
     top: 0;
-    z-index: 1000;
-
-    min-height: 76px;
+    z-index: 100;
+    min-height: 72px;
     padding: 14px 0;
   }
 
   .nav-inner {
     position: relative;
-
-    width: min(calc(100% - 36px), var(--max));
-    min-height: 48px;
-    margin: 0 auto;
-
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
-    gap: 16px;
     flex-wrap: nowrap;
-
+    gap: 12px;
+    width: min(calc(100% - 36px), var(--max));
+    min-height: 44px;
+    margin: 0 auto;
     transform: none;
   }
 
-  /* Always show the logo on mobile */
-  .logo,
-  .nav-inner .logo {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-
+  .logo {
     position: relative;
-    z-index: 1100;
-
-    flex: 0 0 auto;
-
-    width: auto;
-    max-width: 180px;
-
-    color: var(--ink) !important;
-    font-family: var(--font-heading);
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.2;
-
+    z-index: 110;
+    display: block;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: calc(100% - 62px);
+    overflow: visible;
+    font-size: clamp(19px, 5vw, 22px);
     white-space: nowrap;
   }
 
-  .logo span {
-    color: var(--green) !important;
+  /* Hide every desktop contact button on mobile.
+     This prevents the CTA from covering the logo. */
+
+  .nav > .nav-cta,
+  .nav .nav-cta,
+  .nav > .desktop-contact-btn,
+  .nav .desktop-contact-btn {
+    display: none !important;
   }
 
-  .logo img {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-
-    width: auto;
-    max-width: 145px;
-    height: auto;
-    max-height: 42px;
-
-    object-fit: contain;
+  .desktop-contact-btn {
+    display: none !important;
   }
 
-  /* Hide desktop navigation links */
+  .menu-toggle {
+    display: block;
+    flex: 0 0 44px;
+    margin-left: auto;
+  }
+
+  /* Mobile side drawer */
+
   .nav-links {
     position: fixed;
-    z-index: 1050;
-
     top: 0;
     right: 0;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-
+    z-index: 105;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: min(82vw, 350px);
     height: 100dvh;
-
+    margin: 0;
     padding: 105px 32px 40px;
-
-    gap: 0 !important;
-
+    gap: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     background: var(--paper);
     border-left: 1px solid var(--line);
     box-shadow: -12px 0 35px rgba(21, 25, 27, 0.12);
-
-    overflow-y: auto;
-    overscroll-behavior: contain;
-
     transform: translateX(105%);
     visibility: hidden;
-
     transition:
       transform 0.3s ease,
       visibility 0.3s ease;
@@ -913,73 +814,50 @@ footer,
 
   .nav-links a {
     display: block;
-
     width: 100%;
     padding: 16px 0;
-
-    color: var(--ink) !important;
+    border-bottom: 1px solid var(--line);
+    color: var(--green);
     font-family: var(--font-body);
     font-size: 15px;
     font-weight: 600;
     line-height: 1.4;
-
-    border-bottom: 1px solid var(--line);
+    white-space: normal;
   }
 
   .nav-links a:hover,
   .nav-links a.active {
-    color: var(--green) !important;
+    color: var(--green-dark);
   }
 
-  .nav-links a.active::after,
-  .nav-links a::after {
-    display: none !important;
+  .nav-links a.active::after {
+    display: none;
   }
 
-  /* Hide desktop contact button */
-  .desktop-contact-btn,
-  .nav-cta,
-  .nav-inner > .btn,
-  .nav-inner > .btn-primary {
-    display: none !important;
-  }
+  /* Contact button inside drawer */
 
-  /* Show hamburger button */
-  .menu-toggle {
-    display: flex !important;
-
-    align-items: center;
-    justify-content: center;
-
-    margin-left: auto;
-  }
-
-  /* Contact button inside mobile drawer */
   .nav-links .mobile-contact-link {
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
-
     width: 100%;
     margin-top: 28px;
     padding: 15px 18px;
-
-    background: var(--green) !important;
-    border: 1px solid var(--green) !important;
+    background: var(--green);
+    border: 1px solid var(--green);
     color: var(--white) !important;
-
     text-align: center;
   }
 
   .nav-links .mobile-contact-link:hover {
-    background: var(--green-dark) !important;
-    border-color: var(--green-dark) !important;
-    color: var(--white) !important;
+    background: var(--green-dark);
+    border-color: var(--green-dark);
   }
 
-  /* Hamburger animation */
+  /* Hamburger animation into X */
+
   .menu-toggle.is-active span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
   }
 
   .menu-toggle.is-active span:nth-child(2) {
@@ -987,7 +865,7 @@ footer,
   }
 
   .menu-toggle.is-active span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .hero {
@@ -1016,10 +894,7 @@ footer,
   }
 
   .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
+    display: block;
   }
 
   .intro p {
@@ -1039,18 +914,13 @@ footer,
   .footer-grid {
     flex-direction: column;
   }
-
-  .footer-links {
-    margin-top: 25px;
-  }
 }
 
 /* =========================================================
    SMALL MOBILE DEVICES
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 620px) {
-
   h1 {
     font-size: 48px;
   }
@@ -1079,15 +949,9 @@ footer,
     height: 250px;
   }
 
-  .footer-inner,
-  .footer-grid {
-    display: flex;
-    flex-direction: column;
-  }
-
   .footer-links {
-    margin-top: 25px;
     flex-wrap: wrap;
+    margin-top: 25px;
   }
 
   .hero-actions {
@@ -1105,27 +969,21 @@ footer,
 }
 
 /* =========================================================
-   VERY SMALL MOBILE DEVICES
-   ========================================================= */
+   EXTRA SMALL MOBILE DEVICES
+========================================================= */
 
 @media (max-width: 380px) {
-
-  .nav-inner {
-    width: calc(100% - 28px) !important;
+  .nav-links {
+    width: min(88vw, 320px);
+    padding-right: 25px;
+    padding-left: 25px;
   }
 
   .logo {
-    font-size: 20px !important;
+    font-size: 18px;
   }
 
-  .logo img {
-    max-width: 125px;
-  }
-
-  .nav-links {
-    width: min(88vw, 320px);
-
-    padding-right: 25px;
-    padding-left: 25px;
+  .nav-inner {
+    gap: 8px;
   }
 }
