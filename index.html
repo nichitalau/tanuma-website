@@ -1,888 +1,966 @@
- 
+
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TANUMA | Food Sourcing &amp; Export Solutions from Indonesia</title>
-<meta name="description" content="TANUMA helps international buyers source Indonesian food products, food ingredients, and agricultural commodities through qualified supplier networks and export coordination.">
-<link rel="canonical" href="https://tanumaglobal.com/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"TANUMA",
-  "url":"https://tanumaglobal.com/"
-}
-</script>
+  <title>TANUMA | Food Sourcing &amp; Export Solutions from Indonesia</title>
 
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "name":"TANUMA",
-  "url":"https://tanumaglobal.com/"
-}
-</script>
+  <meta
+    name="description"
+    content="TANUMA helps international buyers source Indonesian food products, food ingredients, and agricultural commodities through qualified supplier networks and export coordination."
+  >
 
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="site-standard.css">
+  <link rel="canonical" href="https://tanumaglobal.com/">
 
-<style>
-/* HOMEPAGE IMAGE TREATMENTS */
-
-.home-products-section {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.home-products-banner-wrap {
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-}
-
-.home-products-banner {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-}
-
-.home-products-banner:hover {
-  opacity: .97;
-}
-
-.home-product-card .card-img {
-  height: 340px;
-}
-
-
-/* RESPONSIVE NAVIGATION */
-
-.hamburger {
-  display: none;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border: 1px solid rgba(20,23,26,.18);
-  border-radius: 10px;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1100;
-}
-
-.hamburger span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: currentColor;
-  border-radius: 3px;
-  transition: transform .2s ease, opacity .2s ease;
-}
-
-
-/* TABLET */
-
-@media (max-width: 1050px) {
-
-  .nav-inner {
-    gap: 18px;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TANUMA",
+    "url": "https://tanumaglobal.com/"
   }
+  </script>
 
-  .nav-links {
-    gap: 16px;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "TANUMA",
+    "url": "https://tanumaglobal.com/"
   }
+  </script>
 
-  .nav .btn-primary {
-    white-space: nowrap;
-    font-size: 13px;
-  }
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site-standard.css">
 
-}
+  <style>
+    /* HOMEPAGE IMAGE TREATMENTS */
 
+    .home-products-section {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
 
-/* MOBILE */
+    .home-products-banner-wrap {
+      width: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+    }
 
-@media (max-width: 850px) {
+    .home-products-banner {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+    }
 
-  .nav-inner {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    min-height: 70px;
-  }
+    .home-products-banner:hover {
+      opacity: .97;
+    }
 
-  .nav .logo {
-    flex: 1 1 auto;
-    min-width: 0;
-    white-space: nowrap;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: calc(100% + 12px);
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    padding: 10px;
-    background: var(--paper, #fafaf8);
-    border: 1px solid rgba(20,23,26,.12);
-    border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(20,23,26,.12);
-  }
-
-  .nav-links.is-open {
-    display: flex;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 13px 14px;
-    border-radius: 8px;
-  }
-
-  .nav-links a:hover,
-  .nav-links a.active {
-    background: rgba(31,92,82,.08);
-  }
-
-  .nav .btn-primary {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .hamburger.is-open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .hamburger.is-open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.is-open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-}
+    .home-product-card .card-img {
+      height: 340px;
+    }
 
 
-/* SMALL IPHONE SCREENS */
+    /* RESPONSIVE NAVIGATION */
 
-@media (max-width: 420px) {
+    .hamburger {
+      display: none;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      border: 1px solid rgba(20,23,26,.18);
+      border-radius: 10px;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1200;
+    }
 
-  .nav-inner {
-    padding-left: 16px;
-    padding-right: 16px;
-    gap: 10px;
-  }
+    .hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 3px;
+      transition:
+        transform .25s ease,
+        opacity .2s ease;
+    }
 
-  .nav .logo {
-    font-size: clamp(23px, 7vw, 30px);
-  }
-
-  .hamburger {
-    width: 40px;
-    height: 40px;
-  }
-
-}
+    .mobile-contact-link {
+      display: none;
+    }
 
 
-/* VERY SMALL SCREENS */
+    /* TABLET */
 
-@media (max-width: 360px) {
+    @media (max-width: 1050px) {
+      .nav-inner {
+        gap: 18px;
+      }
 
-  .nav-inner {
-    gap: 8px;
-  }
+      .nav-links {
+        gap: 16px;
+      }
 
-  .nav .logo {
-    font-size: 23px;
-  }
+      .nav .btn-primary {
+        white-space: nowrap;
+        font-size: 13px;
+      }
+    }
 
-  .hamburger {
-    width: 38px;
-    height: 38px;
-  }
 
-}
-</style>
+    /* MOBILE SIDE MENU */
+
+    @media (max-width: 850px) {
+      .nav-inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 70px;
+      }
+
+      .nav .logo {
+        flex: 1 1 auto;
+        min-width: 0;
+        white-space: nowrap;
+      }
+
+      .nav .btn-primary {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(84vw, 360px);
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 105px 30px 40px;
+        background: var(--paper, #fafaf8);
+        border-left: 1px solid rgba(20,23,26,.12);
+        box-shadow: -12px 0 35px rgba(20,23,26,.12);
+        overflow-y: auto;
+        z-index: 1100;
+        transform: translateX(105%);
+        visibility: hidden;
+        transition:
+          transform .3s ease,
+          visibility .3s ease;
+      }
+
+      .nav-links.is-open {
+        transform: translateX(0);
+        visibility: visible;
+      }
+
+      .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(20,23,26,.10);
+        border-radius: 0;
+        font-size: 16px;
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        background: transparent;
+        color: var(--accent, #1f5c52);
+      }
+
+      .mobile-contact-link {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        margin-top: 28px;
+        padding: 14px 18px !important;
+        border: 1px solid var(--ink, #14171a) !important;
+        border-radius: 999px !important;
+        background: var(--ink, #14171a);
+        color: #fff !important;
+        text-align: center;
+      }
+
+      .hamburger.is-open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      .hamburger.is-open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.is-open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+
+      body.menu-open {
+        overflow: hidden;
+      }
+    }
+
+
+    /* SMALL IPHONE SCREENS */
+
+    @media (max-width: 420px) {
+      .nav-inner {
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 10px;
+      }
+
+      .nav .logo {
+        font-size: clamp(23px, 7vw, 30px);
+      }
+
+      .hamburger {
+        width: 40px;
+        height: 40px;
+      }
+
+      .nav-links {
+        width: min(88vw, 350px);
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+
+
+    /* VERY SMALL SCREENS */
+
+    @media (max-width: 360px) {
+      .nav-inner {
+        gap: 8px;
+      }
+
+      .nav .logo {
+        font-size: 23px;
+      }
+
+      .hamburger {
+        width: 38px;
+        height: 38px;
+      }
+
+      .nav-links {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+    }
+  </style>
 </head>
+
 
 <body>
 
-<header class="nav">
+  <!-- NAVIGATION -->
 
-  <div class="nav-inner">
+  <header class="nav">
+    <div class="nav-inner">
 
-    <a class="logo" href="index.html">
-      TANU<span>MA</span>
-    </a>
-
-    <nav id="main-navigation" class="nav-links">
-
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="products.html">Products</a>
-      <a href="what-we-offer.html">What We Offer</a>
-      <a href="sourcing.html">Sourcing</a>
-      <a href="insights.html">Insights</a>
-
-    </nav>
-
-    <a class="btn btn-primary" href="contact.html">
-      Tell Us What You Need
-    </a>
-
-    <button
-      class="hamburger"
-      type="button"
-      aria-label="Open menu"
-      aria-expanded="false"
-      aria-controls="main-navigation"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-  </div>
-
-</header>
-
-
-<!-- HERO -->
-
-<section
-  class="hero"
-  style="background-image:url('images/homepage-headline.jpg')"
->
-
-  <div class="container hero-content">
-
-    <div class="eyebrow">
-      FOOD SOURCING &amp; EXPORT FROM INDONESIA
-    </div>
-
-    <h1>
-      Food Sourcing &amp; Export Solutions from Indonesia
-    </h1>
-
-    <p>
-      TANUMA helps international buyers source Indonesian food products,
-      food ingredients, and agricultural commodities through qualified
-      supplier networks — from supplier identification and product
-      evaluation to export coordination.
-    </p>
-
-    <div class="hero-actions">
-
-      <a class="btn btn-light" href="products.html">
-        Explore Our Products
-      </a>
-
-      <a class="btn btn-outline" href="sourcing.html">
-        Start a Sourcing Request
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- WHAT WE DO -->
-
-<section class="section">
-
-  <div class="container">
-
-    <div class="kicker">
-      What We Do
-    </div>
-
-    <h2>
-      Source. Promote. Learn.
-    </h2>
-
-    <p class="lead">
-      TANUMA supports international buyers and businesses through food
-      sourcing, market promotion, and practical export-import resources.
-    </p>
-
-    <div class="grid-3" style="margin-top:50px">
-
-      <div>
-
-        <div class="kicker">
-          01 · Source
-        </div>
-
-        <h3>
-          Source food products and ingredients
-        </h3>
-
-        <p>
-          Source food products, ingredients and agricultural commodities
-          from Indonesia and selected global markets.
-        </p>
-
-        <a class="text-link" href="sourcing.html">
-          Start sourcing →
-        </a>
-
-      </div>
-
-
-      <div>
-
-        <div class="kicker">
-          02 · Promote
-        </div>
-
-        <h3>
-          Promote products to new markets
-        </h3>
-
-        <p>
-          Help suitable products and suppliers reach international buyers
-          and new markets.
-        </p>
-
-        <a class="text-link" href="what-we-offer.html#promote">
-          Promote with us →
-        </a>
-
-      </div>
-
-
-      <div>
-
-        <div class="kicker">
-          03 · Learn
-        </div>
-
-        <h3>
-          Learn global food trade
-        </h3>
-
-        <p>
-          Access practical insights on sourcing, export-import and global
-          food trade.
-        </p>
-
-        <a class="text-link" href="insights.html#guides">
-          Explore guides →
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PRODUCTS BANNER -->
-
-<section class="home-products-section">
-
-  <div class="home-products-banner-wrap home-products-banner-fullbleed">
-
-    <a href="products.html" aria-label="View TANUMA products">
-
-      <img
-        class="home-products-banner"
-        src="images/products-banner.png"
-        alt="TANUMA products and sourcing network"
-      >
-
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- SELECTED PRODUCTS -->
-
-<section class="section">
-
-  <div class="container">
-
-    <div class="intro">
-
-      <div>
-
-        <div class="kicker">
-          FOOD INGREDIENTS &amp; RAW MATERIALS
-        </div>
-
-        <h2>
-          Food Ingredients &amp; Raw Materials
-        </h2>
-
-      </div>
-
-      <p>
-        Source food ingredients and agricultural raw materials from
-        Indonesia and selected global markets, matched to your
-        specifications and sourcing requirements.
-      </p>
-
-    </div>
-
-
-    <div class="grid-3">
-
-
-      <!-- DESICCATED COCONUT -->
-
-      <div class="card home-product-card">
-
-        <div
-          class="card-img"
-          style="background-image:url('images/desiccated-coconut.png')"
-        ></div>
-
-        <div class="card-body">
-
-          <span class="tag">
-            Food Ingredient · Indonesia
-          </span>
-
-          <h3 style="margin-top:18px">
-            Desiccated Coconut
-          </h3>
-
-          <p>
-            Source desiccated coconut from Indonesia through qualified
-            supplier networks for food manufacturing and processing
-            requirements.
-          </p>
-
-          <a class="text-link" href="product-desiccated-coconut.html">
-            View product →
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- TAPIOCA STARCH -->
-
-      <div class="card home-product-card">
-
-        <div
-          class="card-img"
-          style="background-image:url('images/tapioca-starch.png')"
-        ></div>
-
-        <div class="card-body">
-
-          <span class="tag">
-            Food Ingredient · Indonesia / Global
-          </span>
-
-          <h3 style="margin-top:18px">
-            Tapioca Starch
-          </h3>
-
-          <p>
-            Source tapioca starch according to product specifications,
-            quantity, packaging and destination requirements.
-          </p>
-
-          <a class="text-link" href="product-tapioca-starch.html">
-            View product →
-          </a>
-
-        </div>
-
-      </div>
-
-
-      <!-- CORN STARCH -->
-
-      <div class="card home-product-card">
-
-        <div
-          class="card-img"
-          style="background-image:url('images/corn-starch.png')"
-        ></div>
-
-        <div class="card-body">
-
-          <span class="tag">
-            Food Ingredient · Indonesia / Global
-          </span>
-
-          <h3 style="margin-top:18px">
-            Corn Starch
-          </h3>
-
-          <p>
-            Source corn starch for food manufacturing and processing
-            requirements based on your specifications.
-          </p>
-
-          <a class="text-link" href="product-corn-starch.html">
-            View product →
-          </a>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-    <div style="margin-top:45px">
-
-      <a class="text-link" href="sourcing.html">
-        Start a Sourcing Request →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- HOW IT WORKS -->
-
-<section class="section dark">
-
-  <div class="container">
-
-    <div class="kicker" style="color:#bad6cf">
-      How It Works
-    </div>
-
-    <h2 style="color:#fff">
-      Food sourcing starts with the right source
-    </h2>
-
-
-    <div class="steps">
-
-
-      <div class="step">
-
-        <div class="step-no">
-          01
-        </div>
-
-        <h3>
-          Tell us
-        </h3>
-
-        <p>
-          Share your product specification, quantity, packaging,
-          destination and purchasing requirements.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="step-no">
-          02
-        </div>
-
-        <h3>
-          We search
-        </h3>
-
-        <p>
-          We identify potential suppliers through our sourcing network
-          and market research.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="step-no">
-          03
-        </div>
-
-        <h3>
-          We evaluate
-        </h3>
-
-        <p>
-          We compare potential options against product, supplier and
-          commercial requirements.
-        </p>
-
-      </div>
-
-
-      <div class="step">
-
-        <div class="step-no">
-          04
-        </div>
-
-        <h3>
-          We connect
-        </h3>
-
-        <p>
-          We facilitate communication with suitable suppliers and
-          coordinate the next sourcing steps.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- FINAL CTA -->
-
-<section
-  class="cta"
-  style="background-image:url('https://images.unsplash.com/photo-1758599543152-a73184816eba?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1800')"
->
-
-  <div class="container cta-content">
-
-    <div class="eyebrow">
-      START HERE
-    </div>
-
-    <h2>
-      Start your food sourcing request
-    </h2>
-
-    <p>
-      Tell TANUMA what product, specification, quantity or destination
-      you are looking for and our team can help identify suitable
-      sourcing options.
-    </p>
-
-    <a class="btn btn-light" href="contact.html">
-      Contact Our Team
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer class="site-footer tanuma-footer">
-
-  <div class="container tanuma-footer-grid">
-
-
-    <div class="tanuma-footer-brand">
-
-      <div class="logo">
+      <a class="logo" href="index.html">
         TANU<span>MA</span>
-      </div>
+      </a>
 
-      <p>
-        Your Bridge to Global Trade.
-      </p>
+      <nav id="main-navigation" class="nav-links">
 
-    </div>
-
-
-    <div class="tanuma-footer-contact">
-
-
-      <div class="tanuma-footer-block">
-
-        <strong>
-          Contact Us
-        </strong>
-
-        <a href="mailto:tanumaglobal@gmail.com">
-          tanumaglobal@gmail.com
-        </a>
-
-        <span>
-          Jakarta, Indonesia
-        </span>
-
-      </div>
-
-
-      <div class="tanuma-footer-block">
-
-        <strong>
-          For Consultation
-        </strong>
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="what-we-offer.html">What We Offer</a>
+        <a href="sourcing.html">Sourcing</a>
+        <a href="insights.html">Insights</a>
 
         <a
-          href="https://wa.me/6285110868066"
-          target="_blank"
-          rel="noopener"
+          class="mobile-contact-link"
+          href="contact.html"
         >
-          WhatsApp: +62 851-1086-8066
+          Tell Us What You Need
+        </a>
+
+      </nav>
+
+      <a class="btn btn-primary" href="contact.html">
+        Tell Us What You Need
+      </a>
+
+      <button
+        class="hamburger"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section
+    class="hero"
+    style="background-image:url('images/homepage-headline.jpg')"
+  >
+
+    <div class="container hero-content">
+
+      <div class="eyebrow">
+        FOOD SOURCING &amp; EXPORT FROM INDONESIA
+      </div>
+
+      <h1>
+        Food Sourcing &amp; Export Solutions from Indonesia
+      </h1>
+
+      <p>
+        TANUMA helps international buyers source Indonesian food products,
+        food ingredients, and agricultural commodities through qualified
+        supplier networks — from supplier identification and product
+        evaluation to export coordination.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="btn btn-light" href="products.html">
+          Explore Our Products
+        </a>
+
+        <a class="btn btn-outline" href="sourcing.html">
+          Start a Sourcing Request
         </a>
 
       </div>
 
+    </div>
 
-      <div class="tanuma-footer-block tanuma-footer-social">
+  </section>
 
-        <strong>
-          Follow TANUMA
-        </strong>
+
+  <!-- WHAT WE DO -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="kicker">
+        What We Do
+      </div>
+
+      <h2>
+        Source. Promote. Learn.
+      </h2>
+
+      <p class="lead">
+        TANUMA supports international buyers and businesses through food
+        sourcing, market promotion, and practical export-import resources.
+      </p>
+
+      <div class="grid-3" style="margin-top:50px">
 
         <div>
 
-          <a
-            href="https://www.linkedin.com/company/tanumaglobal/"
-            target="_blank"
-            rel="noopener"
-          >
-            LinkedIn
+          <div class="kicker">
+            01 · Source
+          </div>
+
+          <h3>
+            Source food products and ingredients
+          </h3>
+
+          <p>
+            Source food products, ingredients and agricultural commodities
+            from Indonesia and selected global markets.
+          </p>
+
+          <a class="text-link" href="sourcing.html">
+            Start sourcing →
           </a>
 
-          <a
-            href="https://www.instagram.com/tanumaglobal/"
-            target="_blank"
-            rel="noopener"
-          >
-            Instagram
+        </div>
+
+
+        <div>
+
+          <div class="kicker">
+            02 · Promote
+          </div>
+
+          <h3>
+            Promote products to new markets
+          </h3>
+
+          <p>
+            Help suitable products and suppliers reach international buyers
+            and new markets.
+          </p>
+
+          <a class="text-link" href="what-we-offer.html#promote">
+            Promote with us →
           </a>
 
-          <a
-            href="https://www.threads.net/@tanumaglobal"
-            target="_blank"
-            rel="noopener"
-          >
-            Threads
+        </div>
+
+
+        <div>
+
+          <div class="kicker">
+            03 · Learn
+          </div>
+
+          <h3>
+            Learn global food trade
+          </h3>
+
+          <p>
+            Access practical insights on sourcing, export-import and global
+            food trade.
+          </p>
+
+          <a class="text-link" href="insights.html#guides">
+            Explore guides →
           </a>
 
         </div>
 
       </div>
 
-
     </div>
 
+  </section>
 
-    <div class="tanuma-footer-links">
 
-      <a href="products.html">
-        Products
-      </a>
+  <!-- PRODUCTS BANNER -->
 
-      <a href="what-we-offer.html">
-        Services
-      </a>
+  <section class="home-products-section">
 
-      <a href="sourcing.html">
-        Sourcing
-      </a>
+    <div class="home-products-banner-wrap home-products-banner-fullbleed">
 
-      <a href="insights.html">
-        Insights
-      </a>
+      <a href="products.html" aria-label="View TANUMA products">
 
-      <a href="contact.html">
-        Contact
+        <img
+          class="home-products-banner"
+          src="images/products-banner.png"
+          alt="TANUMA products and sourcing network"
+        >
+
       </a>
 
     </div>
 
-
-  </div>
-
-</footer>
+  </section>
 
 
-<!-- HAMBURGER MENU SCRIPT -->
+  <!-- SELECTED PRODUCTS -->
 
-<script>
-  const hamburger = document.querySelector('.hamburger');
-  const navigation = document.querySelector('.nav-links');
+  <section class="section">
 
-  if (hamburger && navigation) {
+    <div class="container">
 
-    hamburger.addEventListener('click', () => {
+      <div class="intro">
 
-      const isOpen = hamburger.classList.toggle('is-open');
+        <div>
 
-      navigation.classList.toggle('is-open', isOpen);
+          <div class="kicker">
+            FOOD INGREDIENTS &amp; RAW MATERIALS
+          </div>
 
-      hamburger.setAttribute(
-        'aria-expanded',
-        String(isOpen)
-      );
+          <h2>
+            Food Ingredients &amp; Raw Materials
+          </h2>
 
-      hamburger.setAttribute(
-        'aria-label',
-        isOpen ? 'Close menu' : 'Open menu'
-      );
+        </div>
 
-    });
+        <p>
+          Source food ingredients and agricultural raw materials from
+          Indonesia and selected global markets, matched to your
+          specifications and sourcing requirements.
+        </p>
+
+      </div>
 
 
-    navigation.querySelectorAll('a').forEach((link) => {
+      <div class="grid-3">
 
-      link.addEventListener('click', () => {
 
-        hamburger.classList.remove('is-open');
+        <!-- DESICCATED COCONUT -->
 
-        navigation.classList.remove('is-open');
+        <div class="card home-product-card">
 
-        hamburger.setAttribute(
-          'aria-expanded',
-          'false'
-        );
+          <div
+            class="card-img"
+            style="background-image:url('images/desiccated-coconut.png')"
+          ></div>
 
-        hamburger.setAttribute(
-          'aria-label',
-          'Open menu'
-        );
+          <div class="card-body">
+
+            <span class="tag">
+              Food Ingredient · Indonesia
+            </span>
+
+            <h3 style="margin-top:18px">
+              Desiccated Coconut
+            </h3>
+
+            <p>
+              Source desiccated coconut from Indonesia through qualified
+              supplier networks for food manufacturing and processing
+              requirements.
+            </p>
+
+            <a class="text-link" href="product-desiccated-coconut.html">
+              View product →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- TAPIOCA STARCH -->
+
+        <div class="card home-product-card">
+
+          <div
+            class="card-img"
+            style="background-image:url('images/tapioca-starch.png')"
+          ></div>
+
+          <div class="card-body">
+
+            <span class="tag">
+              Food Ingredient · Indonesia / Global
+            </span>
+
+            <h3 style="margin-top:18px">
+              Tapioca Starch
+            </h3>
+
+            <p>
+              Source tapioca starch according to product specifications,
+              quantity, packaging and destination requirements.
+            </p>
+
+            <a class="text-link" href="product-tapioca-starch.html">
+              View product →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- CORN STARCH -->
+
+        <div class="card home-product-card">
+
+          <div
+            class="card-img"
+            style="background-image:url('images/corn-starch.png')"
+          ></div>
+
+          <div class="card-body">
+
+            <span class="tag">
+              Food Ingredient · Indonesia / Global
+            </span>
+
+            <h3 style="margin-top:18px">
+              Corn Starch
+            </h3>
+
+            <p>
+              Source corn starch for food manufacturing and processing
+              requirements based on your specifications.
+            </p>
+
+            <a class="text-link" href="product-corn-starch.html">
+              View product →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div style="margin-top:45px">
+
+        <a class="text-link" href="sourcing.html">
+          Start a Sourcing Request →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+
+  <section class="section dark">
+
+    <div class="container">
+
+      <div class="kicker" style="color:#bad6cf">
+        How It Works
+      </div>
+
+      <h2 style="color:#fff">
+        Food sourcing starts with the right source
+      </h2>
+
+
+      <div class="steps">
+
+
+        <div class="step">
+
+          <div class="step-no">
+            01
+          </div>
+
+          <h3>
+            Tell us
+          </h3>
+
+          <p>
+            Share your product specification, quantity, packaging,
+            destination and purchasing requirements.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-no">
+            02
+          </div>
+
+          <h3>
+            We search
+          </h3>
+
+          <p>
+            We identify potential suppliers through our sourcing network
+            and market research.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-no">
+            03
+          </div>
+
+          <h3>
+            We evaluate
+          </h3>
+
+          <p>
+            We compare potential options against product, supplier and
+            commercial requirements.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="step-no">
+            04
+          </div>
+
+          <h3>
+            We connect
+          </h3>
+
+          <p>
+            We facilitate communication with suitable suppliers and
+            coordinate the next sourcing steps.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL CTA -->
+
+  <section
+    class="cta"
+    style="background-image:url('https://images.unsplash.com/photo-1758599543152-a73184816eba?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1800')"
+  >
+
+    <div class="container cta-content">
+
+      <div class="eyebrow">
+        START HERE
+      </div>
+
+      <h2>
+        Start your food sourcing request
+      </h2>
+
+      <p>
+        Tell TANUMA what product, specification, quantity or destination
+        you are looking for and our team can help identify suitable
+        sourcing options.
+      </p>
+
+      <a class="btn btn-light" href="contact.html">
+        Contact Our Team
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer tanuma-footer">
+
+    <div class="container tanuma-footer-grid">
+
+
+      <div class="tanuma-footer-brand">
+
+        <div class="logo">
+          TANU<span>MA</span>
+        </div>
+
+        <p>
+          Your Bridge to Global Trade.
+        </p>
+
+      </div>
+
+
+      <div class="tanuma-footer-contact">
+
+
+        <div class="tanuma-footer-block">
+
+          <strong>
+            Contact Us
+          </strong>
+
+          <a href="mailto:tanumaglobal@gmail.com">
+            tanumaglobal@gmail.com
+          </a>
+
+          <span>
+            Jakarta, Indonesia
+          </span>
+
+        </div>
+
+
+        <div class="tanuma-footer-block">
+
+          <strong>
+            For Consultation
+          </strong>
+
+          <a
+            href="https://wa.me/6285110868066"
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp: +62 851-1086-8066
+          </a>
+
+        </div>
+
+
+        <div class="tanuma-footer-block tanuma-footer-social">
+
+          <strong>
+            Follow TANUMA
+          </strong>
+
+          <div>
+
+            <a
+              href="https://www.linkedin.com/company/tanumaglobal/"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://www.instagram.com/tanumaglobal/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://www.threads.net/@tanumaglobal"
+              target="_blank"
+              rel="noopener"
+            >
+              Threads
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="tanuma-footer-links">
+
+        <a href="products.html">
+          Products
+        </a>
+
+        <a href="what-we-offer.html">
+          Services
+        </a>
+
+        <a href="sourcing.html">
+          Sourcing
+        </a>
+
+        <a href="insights.html">
+          Insights
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE SIDE MENU SCRIPT -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const hamburger = document.querySelector(".hamburger");
+      const navigation = document.querySelector(".nav-links");
+      const menuLinks = navigation
+        ? navigation.querySelectorAll("a")
+        : [];
+
+      if (!hamburger || !navigation) {
+        return;
+      }
+
+      const openMenu = () => {
+        hamburger.classList.add("is-open");
+        navigation.classList.add("is-open");
+        document.body.classList.add("menu-open");
+
+        hamburger.setAttribute("aria-expanded", "true");
+        hamburger.setAttribute("aria-label", "Close menu");
+      };
+
+      const closeMenu = () => {
+        hamburger.classList.remove("is-open");
+        navigation.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+
+        hamburger.setAttribute("aria-expanded", "false");
+        hamburger.setAttribute("aria-label", "Open menu");
+      };
+
+      hamburger.addEventListener("click", () => {
+
+        const isOpen =
+          hamburger.classList.contains("is-open");
+
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+
+      });
+
+
+      menuLinks.forEach((link) => {
+
+        link.addEventListener("click", () => {
+          closeMenu();
+        });
+
+      });
+
+
+      document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+
+      });
+
+
+      window.addEventListener("resize", () => {
+
+        if (window.innerWidth > 850) {
+          closeMenu();
+        }
 
       });
 
     });
-
-  }
-</script>
+  </script>
 
 </body>
 </html>
